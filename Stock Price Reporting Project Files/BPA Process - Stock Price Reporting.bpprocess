@@ -18,7 +18,7 @@
     <name>Retrieve Prices for all Stocks</name>
     <view>
       <camerax>-21</camerax>
-      <cameray>3</cameray>
+      <cameray>4</cameray>
       <zoom version="2">1.875</zoom>
     </view>
   </subsheet>
@@ -54,16 +54,16 @@
   </stage>
   <stage stageid="46f3f871-1a7d-4fb5-8e5f-74bbcdc8500b" name="Start" type="Start">
     <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
-    <display x="-150" y="-135" />
+    <display x="-60" y="-180" />
     <inputs>
       <input type="text" name="stock_symbol_workbook_path" narrative="Complete path of the workbook that contain the symbols of stocks." stage="workbook_path" />
       <input type="text" name="workbook_sheet_name" narrative="Name of sheet that contains required data" stage="sheet_name" />
     </inputs>
-    <onsuccess>db4e62c8-aced-4008-b363-83b1f5a016b1</onsuccess>
+    <onsuccess>4bf29a0f-cb70-45a5-86ac-073dd51807e7</onsuccess>
   </stage>
   <stage stageid="2b789e06-e9d2-4664-bc17-7cca358737df" name="End" type="End">
     <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
-    <display x="45" y="120" />
+    <display x="120" y="150" />
     <outputs>
       <output type="collection" name="stocks_collec" narrative="Symbols of stocks, contained in field named &quot;Stock Symbol&quot;" stage="stocks" />
     </outputs>
@@ -71,7 +71,7 @@
   <stage stageid="db4e62c8-aced-4008-b363-83b1f5a016b1" name="MS Excel VBO::Create Instance" type="Action">
     <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="-60" y="-135" w="60" h="60" />
+    <display x="-60" y="-45" w="60" h="60" />
     <inputs>
       <input type="flag" name="Enable Events" friendlyname="Enable Events" narrative="Flag to indicate that events should be enabled / disabled on the attached instance - defaulted to True" expr="" />
     </inputs>
@@ -84,7 +84,7 @@
   <stage stageid="7f174d87-c3b3-4371-a634-5ddec062be08" name="MS Excel VBO::Open Workbook" type="Action">
     <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="45" y="-135" w="60" h="60" />
+    <display x="30" y="-45" w="60" h="60" />
     <inputs>
       <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the required workbook should be opened. The default of zero indicates the currently active instance." expr="[excel_handle]" />
       <input type="text" name="File name" friendlyname="File name" narrative="The path and name of the file which should be opened." expr="[workbook_path]" />
@@ -98,7 +98,7 @@
   <stage stageid="4aa59a36-295a-4db1-bbb6-fb1fafcfdba3" name="MS Excel VBO::Get Worksheet As Collection" type="Action">
     <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="45" y="-45" w="60" h="60" />
+    <display x="120" y="-45" w="60" h="60" />
     <inputs>
       <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the worksheet which should be retrieved resides. The default of zero indicates the currently active instance." expr="[excel_handle]" />
       <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook which contains the sheet required. The default empty text indicates the currently active workbook on the specified instance." expr="[Workbook Name]" />
@@ -114,7 +114,7 @@
   <stage stageid="d9a4cc5b-263a-41e4-9eed-947c0e252581" name="MS Excel VBO::Close Instance" type="Action">
     <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="45" y="45" w="60" h="60" />
+    <display x="120" y="75" w="60" h="60" />
     <inputs>
       <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance to be closed. Zero indicates the currently active instance." expr="[excel_handle]" />
       <input type="flag" name="Save Changes" friendlyname="Save Changes" narrative="True to save the changes to the open workbooks on the instance, False to discard any changes. Default is False." expr="False" />
@@ -205,16 +205,16 @@
   </stage>
   <stage stageid="19826439-5614-4a14-9a02-aad64b7dd3dd" name="Start" type="Start">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
-    <display x="-120" y="-180" />
+    <display x="-45" y="-30" />
     <inputs>
       <input type="collection" name="stocks_collection" narrative="Symbol of the stocks that can uniquely identify the stocks whose prices are to be fetched." stage="stocks-input" />
       <input type="text" name="market_to_search" narrative="The market in which the stocks should be searched for. Ex - &quot;US&quot;" stage="market" />
     </inputs>
-    <onsuccess>8f77b90a-4336-4642-a16f-cad6859bb020</onsuccess>
+    <onsuccess>71a4a248-fdfe-4053-9d9c-6462afbea318</onsuccess>
   </stage>
   <stage stageid="c25262e5-f4f1-433b-8c9e-47c39a1c3e09" name="End" type="End">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
-    <display x="285" y="-90" />
+    <display x="285" y="-15" />
     <outputs>
       <output type="collection" name="stocks_price" stage="stocks_price-output" />
     </outputs>
@@ -244,14 +244,14 @@
   <stage stageid="8f77b90a-4336-4642-a16f-cad6859bb020" name="Google Finance - Basic Actions::Launch Website" type="Action">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="-120" y="-120" w="90" h="60" />
+    <display x="-45" y="75" w="90" h="60" />
     <onsuccess>4f81fc46-6296-4fb2-8fd2-2bf596266e85</onsuccess>
     <resource object="1. Google Finance - Basic Actions" action="Launch" />
   </stage>
   <stage stageid="4f81fc46-6296-4fb2-8fd2-2bf596266e85" name="Google Finance - Basic Actions::Select Market" type="Action">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="-120" y="-45" w="90" h="60" />
+    <display x="-45" y="150" w="90" h="60" />
     <inputs>
       <input type="text" name="market_to_search" friendlyname="market_to_search" narrative="The market which will be selected before searching for stocks" expr="[market]" />
     </inputs>
@@ -270,7 +270,7 @@
   <stage stageid="6e7b8512-6e30-4993-86bd-50f6e6cb564c" name="For each Stock Symbol" type="LoopStart">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="90" y="-180" w="120" h="30" />
+    <display x="135" y="-180" w="120" h="30" />
     <onsuccess>08d70f33-db79-48b4-a959-27c64b29df0e</onsuccess>
     <groupid>1142d3ff-31e7-4393-89a3-498bd646c875</groupid>
     <looptype>ForEach</looptype>
@@ -279,21 +279,21 @@
   <stage stageid="6de3140b-c877-48f0-9b4d-c2a8161677fd" name="For each Stock Symbol" type="LoopEnd">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="90" y="180" w="120" h="30" />
+    <display x="135" y="180" w="120" h="30" />
     <onsuccess>a9936cf6-4875-4efa-bd68-a8e87a5a0398</onsuccess>
     <groupid>1142d3ff-31e7-4393-89a3-498bd646c875</groupid>
   </stage>
   <stage stageid="d7961b81-7720-4602-898e-e0b4b0c3fc91" name="Google Finance - Basic Actions::Close" type="Action">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="285" y="-165" w="60" h="60" />
+    <display x="285" y="-90" w="60" h="60" />
     <onsuccess>c25262e5-f4f1-433b-8c9e-47c39a1c3e09</onsuccess>
     <resource object="1. Google Finance - Basic Actions" action="Close" />
   </stage>
   <stage stageid="08d70f33-db79-48b4-a959-27c64b29df0e" name="Google Finance - Basic Actions::Enter Stock name to Homepage Search Bar" type="Action">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="90" y="-135" w="150" h="30" />
+    <display x="135" y="-135" w="150" h="30" />
     <inputs>
       <input type="text" name="stock_name" friendlyname="stock_name" narrative="Name of the stock to be searched. Name should exactly match." expr="[stocks-input.Stock Symbol]" />
       <input type="text" name="market_to_search" friendlyname="market_to_search" narrative="The market in which search should be carried out." expr="[market]" />
@@ -304,33 +304,33 @@
   <stage stageid="4113b240-12ad-4806-94c5-db878fdc37c7" name="Anchor1" type="Anchor">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="-30" y="-45" w="10" h="10" />
+    <display x="30" y="150" w="10" h="10" />
     <onsuccess>4291f589-a9f1-43e8-9cfd-9642bec8176e</onsuccess>
   </stage>
   <stage stageid="4291f589-a9f1-43e8-9cfd-9642bec8176e" name="Anchor2" type="Anchor">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="-30" y="-180" w="10" h="10" />
+    <display x="30" y="-180" w="10" h="10" />
     <onsuccess>6e7b8512-6e30-4993-86bd-50f6e6cb564c</onsuccess>
   </stage>
   <stage stageid="41db5ad0-c1c3-46f5-a29d-50e5bf77c700" name="Google Finance - Basic Actions::Click on Homepage Stock Search Label" type="Action">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="90" y="-90" w="150" h="30" />
+    <display x="135" y="-90" w="150" h="30" />
     <onsuccess>e74229a9-6c54-4764-b840-756d40bbd439</onsuccess>
     <resource object="1. Google Finance - Basic Actions" action="Focus Homepage Search Bar" />
   </stage>
   <stage stageid="e74229a9-6c54-4764-b840-756d40bbd439" name="Google Finance - Basic Actions::Click on Homepage Stock Search Label" type="Action">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="90" y="-45" w="150" h="30" />
+    <display x="135" y="-45" w="150" h="30" />
     <onsuccess>0454f36f-6c6b-4fe1-ae17-06c133d57688</onsuccess>
     <resource object="1. Google Finance - Basic Actions" action="Click on Homepage Stock Search Label" />
   </stage>
   <stage stageid="dc240ee6-faab-4f2f-9fa5-2f233b5c0e05" name="Google Finance - Share Price::Get Share Price" type="Action">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="90" y="90" w="120" h="30" />
+    <display x="135" y="90" w="120" h="30" />
     <outputs>
       <output type="text" name="share_price" friendlyname="share_price" stage="stocks_price-output.Price" />
     </outputs>
@@ -340,26 +340,26 @@
   <stage stageid="65ae43be-1c5a-4433-ab69-2b1ff62ab7b3" name="Google Finance - Share Price::Click Back Button to go to Home Page" type="Action">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="90" y="135" w="150" h="30" />
+    <display x="135" y="135" w="150" h="30" />
     <onsuccess>6de3140b-c877-48f0-9b4d-c2a8161677fd</onsuccess>
     <resource object="2. Google Finance - Share Price" action="Click Back Button to go to Home Page" />
   </stage>
   <stage stageid="1736bc88-24a3-4ab0-8b9e-00cb7031141a" name="Anchor3" type="Anchor">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="210" y="-165" w="10" h="10" />
-    <onsuccess>d7961b81-7720-4602-898e-e0b4b0c3fc91</onsuccess>
+    <display x="225" y="-180" w="10" h="10" />
+    <onsuccess>0a16d5f8-4119-4c26-8d74-d770d72b4a58</onsuccess>
   </stage>
   <stage stageid="a9936cf6-4875-4efa-bd68-a8e87a5a0398" name="Anchor4" type="Anchor">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="210" y="180" w="10" h="10" />
+    <display x="225" y="180" w="10" h="10" />
     <onsuccess>1736bc88-24a3-4ab0-8b9e-00cb7031141a</onsuccess>
   </stage>
   <stage stageid="48e425fc-86e8-4d84-a18a-1d0d0b6d38f6" name="Set Stock Symbol &amp; Current Time to output collec" type="MultipleCalculation">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="90" y="45" w="150" h="30" />
+    <display x="135" y="45" w="150" h="30" />
     <onsuccess>dc240ee6-faab-4f2f-9fa5-2f233b5c0e05</onsuccess>
     <steps>
       <calculation expression="[stocks-input.Stock Symbol]" stage="stocks_price-output.Stock Symbol" />
@@ -390,7 +390,7 @@
   <stage stageid="0454f36f-6c6b-4fe1-ae17-06c133d57688" name="Collections::Add 1 Row to main collection" type="Action">
     <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="90" y="0" w="90" h="30" />
+    <display x="135" y="0" w="90" h="30" />
     <inputs>
       <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;stocks_price-output&quot;" />
     </inputs>
@@ -415,26 +415,26 @@
   </stage>
   <stage stageid="20ff67ce-ed8d-44f3-a3a5-2f0dd4379d24" name="Create workbook containing output data" type="SubSheetInfo">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
-    <display x="-315" y="-135" w="270" h="90" />
+    <display x="-375" y="-150" w="120" h="60" />
   </stage>
   <stage stageid="ef850205-3711-4493-8931-646085df56a6" name="Start" type="Start">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
-    <display x="-120" y="-120" />
+    <display x="-120" y="-180" />
     <inputs>
       <input type="text" name="output_workbook_path" narrative="Complete path of the output workbook to be created." stage="output_workbook_path" />
       <input type="collection" name="output_data_collection" narrative="The data that is to be written into the output file." stage="output_data_collection" />
       <input type="text" name="output_sheet_name" narrative="Sheet in which data will be written." stage="output_sheet_name" />
     </inputs>
-    <onsuccess>47fcf3af-70b7-404d-bc1d-4a31d6a20ce0</onsuccess>
+    <onsuccess>99f8e44d-7650-43c2-9331-b40c9875345a</onsuccess>
   </stage>
   <stage stageid="bed75f99-35a9-47ce-a763-181e224a3a30" name="End" type="End">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
-    <display x="255" y="135" />
+    <display x="105" y="150" />
   </stage>
   <stage stageid="47fcf3af-70b7-404d-bc1d-4a31d6a20ce0" name="MS Excel VBO::Create Instance" type="Action">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="-30" y="-120" w="60" h="60" />
+    <display x="-120" y="-90" w="60" h="60" />
     <inputs>
       <input type="flag" name="Enable Events" friendlyname="Enable Events" narrative="Flag to indicate that events should be enabled / disabled on the attached instance - defaulted to True" expr="" />
     </inputs>
@@ -447,7 +447,7 @@
   <stage stageid="100a2b94-4b76-4591-bc62-829c91307ff8" name="MS Excel VBO::Write Collection" type="Action">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="255" y="-120" w="60" h="60" />
+    <display x="105" y="-90" w="60" h="60" />
     <inputs>
       <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the specified collection should be written. The default of zero indicates the currently active instance." expr="[excel_handle]" />
       <input type="collection" name="Collection" friendlyname="Collection" narrative="The collection containing the data which should be written to the worksheet." expr="[output_data_collection]" />
@@ -462,7 +462,7 @@
   <stage stageid="0f9f304e-899c-42f2-9d03-f2fdfb42985d" name="MS Excel VBO::Close Instance" type="Action">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="255" y="60" w="60" h="60" />
+    <display x="105" y="75" w="60" h="60" />
     <inputs>
       <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance to be closed. Zero indicates the currently active instance." expr="[excel_handle]" />
       <input type="flag" name="Save Changes" friendlyname="Save Changes" narrative="True to save the changes to the open workbooks on the instance, False to discard any changes. Default is False." expr="True" />
@@ -473,7 +473,7 @@
   <stage stageid="61612dbf-c2ac-4b61-b08a-a5db3ab8af6c" name="output_workbook_path" type="Data">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="-390" y="-45" w="120" h="60" />
+    <display x="-405" y="-45" w="120" h="60" />
     <datatype>text</datatype>
     <initialvalue />
     <private />
@@ -481,14 +481,14 @@
   </stage>
   <stage stageid="f07f7f23-9e4e-4f48-ba79-f623f70bf5ea" name="output_data_collection" type="Collection">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
-    <display x="-390" y="75" w="120" h="60" />
+    <display x="-405" y="75" w="120" h="60" />
     <datatype>collection</datatype>
     <private />
     <alwaysinit />
   </stage>
   <stage stageid="18069034-c17f-4f95-816c-592a131adda5" name="excel_handle" type="Data">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
-    <display x="-240" y="-60" w="90" h="30" />
+    <display x="-285" y="-60" w="90" h="30" />
     <datatype>number</datatype>
     <initialvalue />
     <private />
@@ -496,7 +496,7 @@
   </stage>
   <stage stageid="111c60e3-80a5-434c-8a31-d87a35701ccf" name="output_sheet_name" type="Data">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
-    <display x="-390" y="15" w="120" h="30" />
+    <display x="-405" y="15" w="120" h="30" />
     <datatype>text</datatype>
     <initialvalue />
     <private />
@@ -516,7 +516,7 @@
   <stage stageid="a5060d9a-bdb2-429c-80cc-749d6526714c" name="MS Excel VBO::Create Worksheet" type="Action">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="150" y="-120" w="60" h="60" />
+    <display x="30" y="-90" w="60" h="60" />
     <inputs>
       <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the worksheet should be created. The default of zero indicates the currently active instance." expr="[excel_handle]" />
       <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook in which the sheet should be created - The default empty value indicates the currently active workbook on the specified instance." expr="[created_temp_workbook]" />
@@ -528,7 +528,7 @@
   <stage stageid="a44b9233-8add-42a7-8ec8-809aff6b8d40" name="MS Excel VBO::Create Workbook" type="Action">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="60" y="-120" w="60" h="60" />
+    <display x="-45" y="-90" w="60" h="60" />
     <inputs>
       <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the workbook should be created. The default of zero indicates the currently active instance." expr="[excel_handle]" />
     </inputs>
@@ -540,7 +540,7 @@
   </stage>
   <stage stageid="57b6077d-5cd2-471a-92c4-e808214e25c2" name="created_temp_workbook" type="Data">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
-    <display x="-240" y="-15" w="120" h="30" />
+    <display x="-270" y="-15" w="120" h="30" />
     <datatype>text</datatype>
     <initialvalue />
     <private />
@@ -549,7 +549,7 @@
   <stage stageid="80a19584-d1de-4b06-bbad-ea8b4edd56de" name="MS Excel VBO::Save Workbook As" type="Action">
     <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="255" y="-30" w="60" h="60" />
+    <display x="105" y="-15" w="60" h="60" />
     <inputs>
       <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the workbook which should be saved resides. The default of zero indicates the currently active instance." expr="[excel_handle]" />
       <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook which should be saved" expr="[created_temp_workbook]" />
@@ -752,5 +752,166 @@
     </inputs>
     <onsuccess>d81b4763-4dd3-4e18-82d3-61878485edab</onsuccess>
     <processid>0007a791-8b2a-469a-a344-84e0d31c9add</processid>
+  </stage>
+  <stage stageid="b76eb696-31d0-46e3-92da-efcd5c44007d" name="Utility - Environment::Kill Process - &quot;excel&quot;" type="Action">
+    <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="345" y="150" w="90" h="60" />
+    <inputs>
+      <input type="text" name="Process Name" friendlyname="Process Name" narrative="The name of the process to kill" expr="&quot;excel&quot;" />
+    </inputs>
+    <onsuccess>2b789e06-e9d2-4664-bc17-7cca358737df</onsuccess>
+    <resource object="Utility - Environment" action="Kill Process" />
+  </stage>
+  <stage stageid="c79ded88-d2ab-435a-9302-81ec279322f2" name="Recover" type="Recover">
+    <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
+    <loginhibit />
+    <display x="225" y="75" />
+    <onsuccess>d05153cf-7276-467c-b1ab-37675f84acbc</onsuccess>
+  </stage>
+  <stage stageid="d05153cf-7276-467c-b1ab-37675f84acbc" name="Resume" type="Resume">
+    <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
+    <loginhibit />
+    <display x="345" y="75" />
+    <onsuccess>b76eb696-31d0-46e3-92da-efcd5c44007d</onsuccess>
+  </stage>
+  <stage stageid="58ba713b-b5f5-42c3-a921-291d032f919d" name="Close Excel Process block" type="Block">
+    <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="30" w="270" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="FFFF00" />
+  </stage>
+  <stage stageid="85b62ae6-82a3-4d8e-a25f-bf1325125356" name="Utility - Environment::Kill Process - &quot;excel&quot;" type="Action">
+    <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="330" y="150" w="90" h="60" />
+    <inputs>
+      <input type="text" name="Process Name" friendlyname="Process Name" narrative="The name of the process to kill" expr="&quot;excel&quot;" />
+    </inputs>
+    <onsuccess>bed75f99-35a9-47ce-a763-181e224a3a30</onsuccess>
+    <resource object="Utility - Environment" action="Kill Process" />
+  </stage>
+  <stage stageid="7868c54a-28ce-491f-8c8f-b3ad0b09e510" name="Recover" type="Recover">
+    <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
+    <loginhibit />
+    <display x="210" y="75" />
+    <onsuccess>3081d4eb-9b9b-4cee-8818-ae52efcd2fe5</onsuccess>
+  </stage>
+  <stage stageid="3081d4eb-9b9b-4cee-8818-ae52efcd2fe5" name="Resume" type="Resume">
+    <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
+    <loginhibit />
+    <display x="330" y="75" />
+    <onsuccess>85b62ae6-82a3-4d8e-a25f-bf1325125356</onsuccess>
+  </stage>
+  <stage stageid="f2132a89-2576-4659-ac51-b0c1868298be" name="Close excel process block" type="Block">
+    <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="0" y="30" w="270" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="FFFF00" />
+  </stage>
+  <stage stageid="71a4a248-fdfe-4053-9d9c-6462afbea318" name="Anchor5" type="Anchor">
+    <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="15" w="10" h="10" />
+    <onsuccess>8f77b90a-4336-4642-a16f-cad6859bb020</onsuccess>
+  </stage>
+  <stage stageid="7ea68e4e-3fc0-41e7-8223-72afb13e4f1f" name="Launch Website Block" type="Block">
+    <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-210" y="45" w="225" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="FF0000" />
+  </stage>
+  <stage stageid="ddd31a82-0486-4824-8371-5d082d7d8123" name="Recover1" type="Recover">
+    <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
+    <loginhibit />
+    <display x="-135" y="75" />
+    <onsuccess>588afef9-dba3-49d8-ae10-4f0f9cc48eae</onsuccess>
+    <attempts>5</attempts>
+    <bubbleException>True</bubbleException>
+  </stage>
+  <stage stageid="588afef9-dba3-49d8-ae10-4f0f9cc48eae" name="Resume1" type="Resume">
+    <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
+    <loginhibit />
+    <display x="-135" y="15" />
+    <onsuccess>71a4a248-fdfe-4053-9d9c-6462afbea318</onsuccess>
+  </stage>
+  <stage stageid="0a16d5f8-4119-4c26-8d74-d770d72b4a58" name="Anchor6" type="Anchor">
+    <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="285" y="-180" w="10" h="10" />
+    <onsuccess>d7961b81-7720-4602-898e-e0b4b0c3fc91</onsuccess>
+  </stage>
+  <stage stageid="06711264-069c-4252-b6dc-68e676e784a8" name="Close msedge block" type="Block">
+    <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="240" y="-135" w="165" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="FFFF00" />
+  </stage>
+  <stage stageid="b606e2c5-0d66-455f-affa-a54e7615e422" name="Recover2" type="Recover">
+    <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
+    <loginhibit />
+    <display x="360" y="-90" />
+    <onsuccess>a795b679-0fde-48ba-bd71-a46fe8280e5b</onsuccess>
+    <attempts>5</attempts>
+    <bubbleException>True</bubbleException>
+  </stage>
+  <stage stageid="a795b679-0fde-48ba-bd71-a46fe8280e5b" name="Resume2" type="Resume">
+    <subsheetid>78d1276f-f9c5-4d52-a566-dd7fa82ab470</subsheetid>
+    <loginhibit />
+    <display x="360" y="-180" />
+    <onsuccess>0a16d5f8-4119-4c26-8d74-d770d72b4a58</onsuccess>
+  </stage>
+  <stage stageid="c8cbc5e0-c457-4aea-864d-c6656d8231f7" name="Excel interaction block" type="Block">
+    <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-210" y="-135" w="495" h="150" />
+    <font family="Segoe UI" size="10" style="Regular" color="00FF00" />
+  </stage>
+  <stage stageid="cd756c38-d6f1-41fc-919a-c19216cf6db5" name="Recover3" type="Recover">
+    <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
+    <loginhibit />
+    <display x="225" y="-60" />
+    <onsuccess>2eb068d0-a8e7-4634-9a54-b871407193a9</onsuccess>
+    <attempts>5</attempts>
+    <bubbleException>True</bubbleException>
+  </stage>
+  <stage stageid="2eb068d0-a8e7-4634-9a54-b871407193a9" name="Resume3" type="Resume">
+    <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
+    <loginhibit />
+    <display x="225" y="-150" />
+    <onsuccess>99f8e44d-7650-43c2-9331-b40c9875345a</onsuccess>
+  </stage>
+  <stage stageid="99f8e44d-7650-43c2-9331-b40c9875345a" name="Anchor7" type="Anchor">
+    <subsheetid>c23bc576-ac35-4fd8-925b-2b6ee4c7464d</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-120" y="-150" w="10" h="10" />
+    <onsuccess>47fcf3af-70b7-404d-bc1d-4a31d6a20ce0</onsuccess>
+  </stage>
+  <stage stageid="3ae392e6-1420-4c70-be87-d3f180c15ee8" name="Excel interaction block" type="Block">
+    <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="-105" w="480" h="105" />
+    <font family="Segoe UI" size="10" style="Regular" color="00FF00" />
+  </stage>
+  <stage stageid="f8dbe54c-fe46-4400-bc64-0e715cd843cf" name="Recover3" type="Recover">
+    <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
+    <loginhibit />
+    <display x="225" y="-45" />
+    <onsuccess>128eadf9-bc66-4429-badf-248520530193</onsuccess>
+    <attempts>5</attempts>
+    <bubbleException>True</bubbleException>
+  </stage>
+  <stage stageid="128eadf9-bc66-4429-badf-248520530193" name="Resume3" type="Resume">
+    <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
+    <loginhibit />
+    <display x="225" y="-135" />
+    <onsuccess>4bf29a0f-cb70-45a5-86ac-073dd51807e7</onsuccess>
+  </stage>
+  <stage stageid="4bf29a0f-cb70-45a5-86ac-073dd51807e7" name="Anchor8" type="Anchor">
+    <subsheetid>bcf0e6b0-40ec-4cbb-b3df-c9ac75d50016</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-60" y="-135" w="10" h="10" />
+    <font family="Segoe UI" size="10" style="Regular" color="FFFF00" />
+    <onsuccess>db4e62c8-aced-4008-b363-83b1f5a016b1</onsuccess>
   </stage>
 </process>
