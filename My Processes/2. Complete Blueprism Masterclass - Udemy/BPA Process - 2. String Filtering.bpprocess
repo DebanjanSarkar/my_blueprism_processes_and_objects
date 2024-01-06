@@ -1,0 +1,115 @@
+﻿<process name="2. String Filtering" version="1.0" bpversion="7.2.1.7446" narrative="Filters the data of a text file and saves it in a new file." byrefcollection="true" processrunningmessage="" disableversioning="false" preferredid="940fa752-9d3d-4fd7-9979-33c764358057">
+  <view>
+    <camerax>-21.1333313</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.875</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="99a06ef6-507f-4dbd-af09-385656cb7c1e" name="Start" type="Start">
+    <display x="-180" y="-135" />
+    <onsuccess>7af0c1ae-6bde-4270-9b09-0e94bdb42169</onsuccess>
+  </stage>
+  <stage stageid="c137e904-d79c-42e0-8f04-180bc8e57a71" name="End" type="End">
+    <display x="105" y="165" />
+  </stage>
+  <stage stageid="5e921ba4-042a-471d-b9af-9236d86399b2" name="Stage1" type="ProcessInfo">
+    <display x="-345" y="-150" w="210" h="90" />
+  </stage>
+  <stage stageid="34c5ddda-206b-4653-b010-6650caae37b7" name="Utility - File Management::Read All Text from File" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="-15" w="90" h="60" />
+    <inputs>
+      <input type="text" name="File Name" friendlyname="File Name" narrative="The full path the file to read the text from" expr="[input_folder] &amp; [input_filename]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" friendlyname="Success" narrative="True if successful" stage="" />
+      <output type="text" name="Message" friendlyname="Message" narrative="An error message if unsuccessful" stage="" />
+      <output type="text" name="Text" friendlyname="Text" narrative="The text of the file" stage="data" />
+    </outputs>
+    <onsuccess>849e2e53-e13a-4d9d-aadb-dfedb52ed7fa</onsuccess>
+    <resource object="Utility - File Management" action="Read All Text from File" />
+  </stage>
+  <stage stageid="147642eb-5e64-4fa4-a8d0-cecd29273041" name="input_folder" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-405" y="-45" w="150" h="90" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">E:\Study\RPA Blueprism\Blueprism\The Complete Blue Prism Masterclass - Beginner to Expert - Udemy\</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5f1b21b7-7588-4000-9e53-78cb28a1d78d" name="input_filename" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-405" y="30" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">messydata.txt</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7e9477b4-b3e6-4601-b9a7-8117d83411f4" name="data" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-270" y="-75" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="849e2e53-e13a-4d9d-aadb-dfedb52ed7fa" name="Remove string" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="45" w="90" h="30" />
+    <onsuccess>d40cd2d0-e55a-41ae-8289-0983808fbb37</onsuccess>
+    <calculation expression="Replace([data], [String_to_be_replaced], &quot;&quot;)" stage="data" />
+  </stage>
+  <stage stageid="d40cd2d0-e55a-41ae-8289-0983808fbb37" name="Utility - File Management::Write Text File" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="105" w="90" h="60" />
+    <inputs>
+      <input type="text" name="File Name" friendlyname="File Name" narrative="The full path to the file to write the text to" expr="[input_folder] &amp; Replace([input_filename], &quot;.txt&quot;, &quot;_clean.txt&quot;)" />
+      <input type="text" name="Text" friendlyname="Text" narrative="The text to write to the file" expr="[data]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" friendlyname="Success" narrative="True if successful" stage="" />
+      <output type="text" name="Message" friendlyname="Message" narrative="An error message if unsuccessful" stage="" />
+    </outputs>
+    <onsuccess>c137e904-d79c-42e0-8f04-180bc8e57a71</onsuccess>
+    <resource object="Utility - File Management" action="Write Text File" />
+  </stage>
+  <stage stageid="7af0c1ae-6bde-4270-9b09-0e94bdb42169" name="Utility - File Management::File Exists" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="-60" y="-135" w="120" h="30" />
+    <inputs>
+      <input type="text" name="File Name" friendlyname="File Name" narrative="The name of the file to check" expr="[input_folder] &amp; [input_filename]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Exists" friendlyname="Exists" narrative="True if the file exists" stage="doFileExist" />
+    </outputs>
+    <onsuccess>d5f9781e-317a-4286-8b4e-6b49801001de</onsuccess>
+    <resource object="Utility - File Management" action="File Exists" />
+  </stage>
+  <stage stageid="45b9672e-5ab7-4daa-80ec-605f6a0aac1d" name="doFileExist" type="Data">
+    <display x="-270" y="-30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d5f9781e-317a-4286-8b4e-6b49801001de" name="File Exists Check" type="Decision">
+    <display x="105" y="-135" w="90" h="30" />
+    <decision expression="[doFileExist] = True" />
+    <ontrue>34c5ddda-206b-4653-b010-6650caae37b7</ontrue>
+    <onfalse>b7d78a77-722b-4a11-94d3-70063676e861</onfalse>
+  </stage>
+  <stage stageid="b7d78a77-722b-4a11-94d3-70063676e861" name="Exception" type="Exception">
+    <display x="225" y="-135" w="90" h="30" />
+    <exception localized="yes" type="File Not Found" detail="&quot;The file with path provided cannot be found or is not accessible.&quot;" />
+  </stage>
+  <stage stageid="407b566c-d4e7-4f8f-8a9a-ba4b9940a04b" name="String_to_be_replaced" type="Data">
+    <loginhibit onsuccess="true" />
+    <narrative>This is the string whose all occurrences will be replaced from the file contents and a new file with the modified contents will be written.</narrative>
+    <display x="-405" y="90" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">e</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+</process>

@@ -1,0 +1,1039 @@
+﻿<process name="2. Google Finance - Share Price" version="1.0" bpversion="7.2.1.7446" narrative="" byrefcollection="true" processrunningmessage="" disableversioning="false" type="object" runmode="Exclusive" preferredid="53650a3e-1ad1-4fe5-9c59-2aff5d3cbecc">
+  <appdef>
+    <element name="Google Finance - Share Price Details Page">
+      <id>fb724523-e1ec-4141-968e-10ff1fa8bac8</id>
+      <element name="Share Price Window [win32]">
+        <id>6092168e-0fac-4b5a-98d9-a4d3fe555477</id>
+        <element name="Share Price Label [HTML]">
+          <id>1b33da5a-9003-4895-953b-5a6b2cef984f</id>
+          <type>WebElement</type>
+          <basetype>WebElement</basetype>
+          <datatype>text</datatype>
+          <diagnose>False</diagnose>
+          <attributes>
+            <attribute name="wX">
+              <ProcessValue datatype="number" value="184" />
+            </attribute>
+            <attribute name="wY">
+              <ProcessValue datatype="number" value="260" />
+            </attribute>
+            <attribute name="wWidth">
+              <ProcessValue datatype="number" value="109" />
+            </attribute>
+            <attribute name="wHeight">
+              <ProcessValue datatype="number" value="44" />
+            </attribute>
+            <attribute name="wClientX">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wClientY">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wClientWidth">
+              <ProcessValue datatype="number" value="110" />
+            </attribute>
+            <attribute name="wClientHeight">
+              <ProcessValue datatype="number" value="44" />
+            </attribute>
+            <attribute name="wOffsetX">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wOffsetY">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wOffsetWidth">
+              <ProcessValue datatype="number" value="110" />
+            </attribute>
+            <attribute name="wOffsetHeight">
+              <ProcessValue datatype="number" value="44" />
+            </attribute>
+            <attribute name="wScrollX">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wScrollY">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wScrollWidth">
+              <ProcessValue datatype="number" value="110" />
+            </attribute>
+            <attribute name="wScrollHeight">
+              <ProcessValue datatype="number" value="44" />
+            </attribute>
+            <attribute name="wElementType" inuse="True">
+              <ProcessValue datatype="text" value="DIV" />
+            </attribute>
+            <attribute name="wXPath" inuse="True">
+              <ProcessValue datatype="text" value="/HTML[1]/BODY[1]/C-WIZ[3]/DIV[1]/DIV[4]/DIV[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/C-WIZ[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/DIV[1]/DIV[1]" />
+            </attribute>
+            <attribute name="wCssSelector">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wValue">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wPageAddress" comparisontype="Wildcard" inuse="True">
+              <ProcessValue datatype="text" value="https://www.google.com/finance/quote/*" />
+            </attribute>
+            <attribute name="wClass">
+              <ProcessValue datatype="text" value="YMlKec fxKbKc" />
+            </attribute>
+            <attribute name="wChildCount">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wIsEditable">
+              <ProcessValue datatype="flag" value="False" />
+            </attribute>
+            <attribute name="wStyle">
+              <ProcessValue datatype="text" value="{&quot;accentColor&quot;:&quot;&quot;,&quot;additiveSymbols&quot;:&quot;&quot;,&quot;alignContent&quot;:&quot;&quot;,&quot;alignItems&quot;:&quot;&quot;,&quot;alignSelf&quot;:&quot;&quot;,&quot;alignmentBaseline&quot;:&quot;&quot;,&quot;all&quot;:&quot;&quot;,&quot;animation&quot;:&quot;&quot;,&quot;animationComposition&quot;:&quot;&quot;,&quot;animationDelay&quot;:&quot;&quot;,&quot;animationDirection&quot;:&quot;&quot;,&quot;animationDuration&quot;:&quot;&quot;,&quot;animationFillMode&quot;:&quot;&quot;,&quot;animationIterationCount&quot;:&quot;&quot;,&quot;animationName&quot;:&quot;&quot;,&quot;animationPlayState&quot;:&quot;&quot;,&quot;animationRange&quot;:&quot;&quot;,&quot;animationRangeEnd&quot;:&quot;&quot;,&quot;animationRangeStart&quot;:&quot;&quot;,&quot;animationTimeline&quot;:&quot;&quot;,&quot;animationTimingFunction&quot;:&quot;&quot;,&quot;appRegion&quot;:&quot;&quot;,&quot;appearance&quot;:&quot;&quot;,&quot;ascentOverride&quot;:&quot;&quot;,&quot;aspectRatio&quot;:&quot;&quot;,&quot;backdropFilter&quot;:&quot;&quot;,&quot;backfaceVisibility&quot;:&quot;&quot;,&quot;background&quot;:&quot;&quot;,&quot;backgroundAttachment&quot;:&quot;&quot;,&quot;backgroundBlendMode&quot;:&quot;&quot;,&quot;backgroundClip&quot;:&quot;&quot;,&quot;backgroundColor&quot;:&quot;&quot;,&quot;backgroundImage&quot;:&quot;&quot;,&quot;backgroundOrigin&quot;:&quot;&quot;,&quot;backgroundPosition&quot;:&quot;&quot;,&quot;backgroundPositionX&quot;:&quot;&quot;,&quot;backgroundPositionY&quot;:&quot;&quot;,&quot;backgroundRepeat&quot;:&quot;&quot;,&quot;backgroundSize&quot;:&quot;&quot;,&quot;basePalette&quot;:&quot;&quot;,&quot;baselineShift&quot;:&quot;&quot;,&quot;baselineSource&quot;:&quot;&quot;,&quot;blockSize&quot;:&quot;&quot;,&quot;border&quot;:&quot;&quot;,&quot;borderBlock&quot;:&quot;&quot;,&quot;borderBlockColor&quot;:&quot;&quot;,&quot;borderBlockEnd&quot;:&quot;&quot;,&quot;borderBlockEndColor&quot;:&quot;&quot;,&quot;borderBlockEndStyle&quot;:&quot;&quot;,&quot;borderBlockEndWidth&quot;:&quot;&quot;,&quot;borderBlockStart&quot;:&quot;&quot;,&quot;borderBlockStartColor&quot;:&quot;&quot;,&quot;borderBlockStartStyle&quot;:&quot;&quot;,&quot;borderBlockStartWidth&quot;:&quot;&quot;,&quot;borderBlockStyle&quot;:&quot;&quot;,&quot;borderBlockWidth&quot;:&quot;&quot;,&quot;borderBottom&quot;:&quot;&quot;,&quot;borderBottomColor&quot;:&quot;&quot;,&quot;borderBottomLeftRadius&quot;:&quot;&quot;,&quot;borderBottomRightRadius&quot;:&quot;&quot;,&quot;borderBottomStyle&quot;:&quot;&quot;,&quot;borderBottomWidth&quot;:&quot;&quot;,&quot;borderCollapse&quot;:&quot;&quot;,&quot;borderColor&quot;:&quot;&quot;,&quot;borderEndEndRadius&quot;:&quot;&quot;,&quot;borderEndStartRadius&quot;:&quot;&quot;,&quot;borderImage&quot;:&quot;&quot;,&quot;borderImageOutset&quot;:&quot;&quot;,&quot;borderImageRepeat&quot;:&quot;&quot;,&quot;borderImageSlice&quot;:&quot;&quot;,&quot;borderImageSource&quot;:&quot;&quot;,&quot;borderImageWidth&quot;:&quot;&quot;,&quot;borderInline&quot;:&quot;&quot;,&quot;borderInlineColor&quot;:&quot;&quot;,&quot;borderInlineEnd&quot;:&quot;&quot;,&quot;borderInlineEndColor&quot;:&quot;&quot;,&quot;borderInlineEndStyle&quot;:&quot;&quot;,&quot;borderInlineEndWidth&quot;:&quot;&quot;,&quot;borderInlineStart&quot;:&quot;&quot;,&quot;borderInlineStartColor&quot;:&quot;&quot;,&quot;borderInlineStartStyle&quot;:&quot;&quot;,&quot;borderInlineStartWidth&quot;:&quot;&quot;,&quot;borderInlineStyle&quot;:&quot;&quot;,&quot;borderInlineWidth&quot;:&quot;&quot;,&quot;borderLeft&quot;:&quot;&quot;,&quot;borderLeftColor&quot;:&quot;&quot;,&quot;borderLeftStyle&quot;:&quot;&quot;,&quot;borderLeftWidth&quot;:&quot;&quot;,&quot;borderRadius&quot;:&quot;&quot;,&quot;borderRight&quot;:&quot;&quot;,&quot;borderRightColor&quot;:&quot;&quot;,&quot;borderRightStyle&quot;:&quot;&quot;,&quot;borderRightWidth&quot;:&quot;&quot;,&quot;borderSpacing&quot;:&quot;&quot;,&quot;borderStartEndRadius&quot;:&quot;&quot;,&quot;borderStartStartRadius&quot;:&quot;&quot;,&quot;borderStyle&quot;:&quot;&quot;,&quot;borderTop&quot;:&quot;&quot;,&quot;borderTopColor&quot;:&quot;&quot;,&quot;borderTopLeftRadius&quot;:&quot;&quot;,&quot;borderTopRightRadius&quot;:&quot;&quot;,&quot;borderTopStyle&quot;:&quot;&quot;,&quot;borderTopWidth&quot;:&quot;&quot;,&quot;borderWidth&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;boxShadow&quot;:&quot;&quot;,&quot;boxSizing&quot;:&quot;&quot;,&quot;breakAfter&quot;:&quot;&quot;,&quot;breakBefore&quot;:&quot;&quot;,&quot;breakInside&quot;:&quot;&quot;,&quot;bufferedRendering&quot;:&quot;&quot;,&quot;captionSide&quot;:&quot;&quot;,&quot;caretColor&quot;:&quot;&quot;,&quot;clear&quot;:&quot;&quot;,&quot;clip&quot;:&quot;&quot;,&quot;clipPath&quot;:&quot;&quot;,&quot;clipRule&quot;:&quot;&quot;,&quot;color&quot;:&quot;&quot;,&quot;colorInterpolation&quot;:&quot;&quot;,&quot;colorInterpolationFilters&quot;:&quot;&quot;,&quot;colorRendering&quot;:&quot;&quot;,&quot;colorScheme&quot;:&quot;&quot;,&quot;columnCount&quot;:&quot;&quot;,&quot;columnFill&quot;:&quot;&quot;,&quot;columnGap&quot;:&quot;&quot;,&quot;columnRule&quot;:&quot;&quot;,&quot;columnRuleColor&quot;:&quot;&quot;,&quot;columnRuleStyle&quot;:&quot;&quot;,&quot;columnRuleWidth&quot;:&quot;&quot;,&quot;columnSpan&quot;:&quot;&quot;,&quot;columnWidth&quot;:&quot;&quot;,&quot;columns&quot;:&quot;&quot;,&quot;contain&quot;:&quot;&quot;,&quot;containIntrinsicBlockSize&quot;:&quot;&quot;,&quot;containIntrinsicHeight&quot;:&quot;&quot;,&quot;containIntrinsicInlineSize&quot;:&quot;&quot;,&quot;containIntrinsicSize&quot;:&quot;&quot;,&quot;containIntrinsicWidth&quot;:&quot;&quot;,&quot;container&quot;:&quot;&quot;,&quot;containerName&quot;:&quot;&quot;,&quot;containerType&quot;:&quot;&quot;,&quot;content&quot;:&quot;&quot;,&quot;contentVisibility&quot;:&quot;&quot;,&quot;counterIncrement&quot;:&quot;&quot;,&quot;counterReset&quot;:&quot;&quot;,&quot;counterSet&quot;:&quot;&quot;,&quot;cursor&quot;:&quot;&quot;,&quot;cx&quot;:&quot;&quot;,&quot;cy&quot;:&quot;&quot;,&quot;d&quot;:&quot;&quot;,&quot;descentOverride&quot;:&quot;&quot;,&quot;direction&quot;:&quot;&quot;,&quot;display&quot;:&quot;&quot;,&quot;dominantBaseline&quot;:&quot;&quot;,&quot;emptyCells&quot;:&quot;&quot;,&quot;fallback&quot;:&quot;&quot;,&quot;fill&quot;:&quot;&quot;,&quot;fillOpacity&quot;:&quot;&quot;,&quot;fillRule&quot;:&quot;&quot;,&quot;filter&quot;:&quot;&quot;,&quot;flex&quot;:&quot;&quot;,&quot;flexBasis&quot;:&quot;&quot;,&quot;flexDirection&quot;:&quot;&quot;,&quot;flexFlow&quot;:&quot;&quot;,&quot;flexGrow&quot;:&quot;&quot;,&quot;flexShrink&quot;:&quot;&quot;,&quot;flexWrap&quot;:&quot;&quot;,&quot;float&quot;:&quot;&quot;,&quot;floodColor&quot;:&quot;&quot;,&quot;floodOpacity&quot;:&quot;&quot;,&quot;font&quot;:&quot;&quot;,&quot;fontDisplay&quot;:&quot;&quot;,&quot;fontFamily&quot;:&quot;&quot;,&quot;fontFeatureSettings&quot;:&quot;&quot;,&quot;fontKerning&quot;:&quot;&quot;,&quot;fontOpticalSizing&quot;:&quot;&quot;,&quot;fontPalette&quot;:&quot;&quot;,&quot;fontSize&quot;:&quot;&quot;,&quot;fontStretch&quot;:&quot;&quot;,&quot;fontStyle&quot;:&quot;&quot;,&quot;fontSynthesis&quot;:&quot;&quot;,&quot;fontSynthesisSmallCaps&quot;:&quot;&quot;,&quot;fontSynthesisStyle&quot;:&quot;&quot;,&quot;fontSynthesisWeight&quot;:&quot;&quot;,&quot;fontVariant&quot;:&quot;&quot;,&quot;fontVariantAlternates&quot;:&quot;&quot;,&quot;fontVariantCaps&quot;:&quot;&quot;,&quot;fontVariantEastAsian&quot;:&quot;&quot;,&quot;fontVariantLigatures&quot;:&quot;&quot;,&quot;fontVariantNumeric&quot;:&quot;&quot;,&quot;fontVariantPosition&quot;:&quot;&quot;,&quot;fontVariationSettings&quot;:&quot;&quot;,&quot;fontWeight&quot;:&quot;&quot;,&quot;forcedColorAdjust&quot;:&quot;&quot;,&quot;gap&quot;:&quot;&quot;,&quot;grid&quot;:&quot;&quot;,&quot;gridArea&quot;:&quot;&quot;,&quot;gridAutoColumns&quot;:&quot;&quot;,&quot;gridAutoFlow&quot;:&quot;&quot;,&quot;gridAutoRows&quot;:&quot;&quot;,&quot;gridColumn&quot;:&quot;&quot;,&quot;gridColumnEnd&quot;:&quot;&quot;,&quot;gridColumnGap&quot;:&quot;&quot;,&quot;gridColumnStart&quot;:&quot;&quot;,&quot;gridGap&quot;:&quot;&quot;,&quot;gridRow&quot;:&quot;&quot;,&quot;gridRowEnd&quot;:&quot;&quot;,&quot;gridRowGap&quot;:&quot;&quot;,&quot;gridRowStart&quot;:&quot;&quot;,&quot;gridTemplate&quot;:&quot;&quot;,&quot;gridTemplateAreas&quot;:&quot;&quot;,&quot;gridTemplateColumns&quot;:&quot;&quot;,&quot;gridTemplateRows&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;,&quot;hyphenateCharacter&quot;:&quot;&quot;,&quot;hyphenateLimitChars&quot;:&quot;&quot;,&quot;hyphens&quot;:&quot;&quot;,&quot;imageOrientation&quot;:&quot;&quot;,&quot;imageRendering&quot;:&quot;&quot;,&quot;inherits&quot;:&quot;&quot;,&quot;initialLetter&quot;:&quot;&quot;,&quot;initialValue&quot;:&quot;&quot;,&quot;inlineSize&quot;:&quot;&quot;,&quot;inset&quot;:&quot;&quot;,&quot;insetBlock&quot;:&quot;&quot;,&quot;insetBlockEnd&quot;:&quot;&quot;,&quot;insetBlockStart&quot;:&quot;&quot;,&quot;insetInline&quot;:&quot;&quot;,&quot;insetInlineEnd&quot;:&quot;&quot;,&quot;insetInlineStart&quot;:&quot;&quot;,&quot;isolation&quot;:&quot;&quot;,&quot;justifyContent&quot;:&quot;&quot;,&quot;justifyItems&quot;:&quot;&quot;,&quot;justifySelf&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;letterSpacing&quot;:&quot;&quot;,&quot;lightingColor&quot;:&quot;&quot;,&quot;lineBreak&quot;:&quot;&quot;,&quot;lineGapOverride&quot;:&quot;&quot;,&quot;lineHeight&quot;:&quot;&quot;,&quot;listStyle&quot;:&quot;&quot;,&quot;listStyleImage&quot;:&quot;&quot;,&quot;listStylePosition&quot;:&quot;&quot;,&quot;listStyleType&quot;:&quot;&quot;,&quot;margin&quot;:&quot;&quot;,&quot;marginBlock&quot;:&quot;&quot;,&quot;marginBlockEnd&quot;:&quot;&quot;,&quot;marginBlockStart&quot;:&quot;&quot;,&quot;marginBottom&quot;:&quot;&quot;,&quot;marginInline&quot;:&quot;&quot;,&quot;marginInlineEnd&quot;:&quot;&quot;,&quot;marginInlineStart&quot;:&quot;&quot;,&quot;marginLeft&quot;:&quot;&quot;,&quot;marginRight&quot;:&quot;&quot;,&quot;marginTop&quot;:&quot;&quot;,&quot;marker&quot;:&quot;&quot;,&quot;markerEnd&quot;:&quot;&quot;,&quot;markerMid&quot;:&quot;&quot;,&quot;markerStart&quot;:&quot;&quot;,&quot;mask&quot;:&quot;&quot;,&quot;maskClip&quot;:&quot;&quot;,&quot;maskComposite&quot;:&quot;&quot;,&quot;maskImage&quot;:&quot;&quot;,&quot;maskMode&quot;:&quot;&quot;,&quot;maskOrigin&quot;:&quot;&quot;,&quot;maskPosition&quot;:&quot;&quot;,&quot;maskRepeat&quot;:&quot;&quot;,&quot;maskSize&quot;:&quot;&quot;,&quot;maskType&quot;:&quot;&quot;,&quot;mathDepth&quot;:&quot;&quot;,&quot;mathShift&quot;:&quot;&quot;,&quot;mathStyle&quot;:&quot;&quot;,&quot;maxBlockSize&quot;:&quot;&quot;,&quot;maxHeight&quot;:&quot;&quot;,&quot;maxInlineSize&quot;:&quot;&quot;,&quot;maxWidth&quot;:&quot;&quot;,&quot;minBlockSize&quot;:&quot;&quot;,&quot;minHeight&quot;:&quot;&quot;,&quot;minInlineSize&quot;:&quot;&quot;,&quot;minWidth&quot;:&quot;&quot;,&quot;mixBlendMode&quot;:&quot;&quot;,&quot;negative&quot;:&quot;&quot;,&quot;objectFit&quot;:&quot;&quot;,&quot;objectPosition&quot;:&quot;&quot;,&quot;objectViewBox&quot;:&quot;&quot;,&quot;offset&quot;:&quot;&quot;,&quot;offsetAnchor&quot;:&quot;&quot;,&quot;offsetDistance&quot;:&quot;&quot;,&quot;offsetPath&quot;:&quot;&quot;,&quot;offsetPosition&quot;:&quot;&quot;,&quot;offsetRotate&quot;:&quot;&quot;,&quot;opacity&quot;:&quot;&quot;,&quot;order&quot;:&quot;&quot;,&quot;orphans&quot;:&quot;&quot;,&quot;outline&quot;:&quot;&quot;,&quot;outlineColor&quot;:&quot;&quot;,&quot;outlineOffset&quot;:&quot;&quot;,&quot;outlineStyle&quot;:&quot;&quot;,&quot;outlineWidth&quot;:&quot;&quot;,&quot;overflow&quot;:&quot;&quot;,&quot;overflowAnchor&quot;:&quot;&quot;,&quot;overflowClipMargin&quot;:&quot;&quot;,&quot;overflowWrap&quot;:&quot;&quot;,&quot;overflowX&quot;:&quot;&quot;,&quot;overflowY&quot;:&quot;&quot;,&quot;overlay&quot;:&quot;&quot;,&quot;overrideColors&quot;:&quot;&quot;,&quot;overscrollBehavior&quot;:&quot;&quot;,&quot;overscrollBehaviorBlock&quot;:&quot;&quot;,&quot;overscrollBehaviorInline&quot;:&quot;&quot;,&quot;overscrollBehaviorX&quot;:&quot;&quot;,&quot;overscrollBehaviorY&quot;:&quot;&quot;,&quot;pad&quot;:&quot;&quot;,&quot;padding&quot;:&quot;&quot;,&quot;paddingBlock&quot;:&quot;&quot;,&quot;paddingBlockEnd&quot;:&quot;&quot;,&quot;paddingBlockStart&quot;:&quot;&quot;,&quot;paddingBottom&quot;:&quot;&quot;,&quot;paddingInline&quot;:&quot;&quot;,&quot;paddingInlineEnd&quot;:&quot;&quot;,&quot;paddingInlineStart&quot;:&quot;&quot;,&quot;paddingLeft&quot;:&quot;&quot;,&quot;paddingRight&quot;:&quot;&quot;,&quot;paddingTop&quot;:&quot;&quot;,&quot;page&quot;:&quot;&quot;,&quot;pageBreakAfter&quot;:&quot;&quot;,&quot;pageBreakBefore&quot;:&quot;&quot;,&quot;pageBreakInside&quot;:&quot;&quot;,&quot;pageOrientation&quot;:&quot;&quot;,&quot;paintOrder&quot;:&quot;&quot;,&quot;perspective&quot;:&quot;&quot;,&quot;perspectiveOrigin&quot;:&quot;&quot;,&quot;placeContent&quot;:&quot;&quot;,&quot;placeItems&quot;:&quot;&quot;,&quot;placeSelf&quot;:&quot;&quot;,&quot;pointerEvents&quot;:&quot;&quot;,&quot;position&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;quotes&quot;:&quot;&quot;,&quot;r&quot;:&quot;&quot;,&quot;range&quot;:&quot;&quot;,&quot;resize&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;rotate&quot;:&quot;&quot;,&quot;rowGap&quot;:&quot;&quot;,&quot;rubyPosition&quot;:&quot;&quot;,&quot;rx&quot;:&quot;&quot;,&quot;ry&quot;:&quot;&quot;,&quot;scale&quot;:&quot;&quot;,&quot;scrollBehavior&quot;:&quot;&quot;,&quot;scrollMargin&quot;:&quot;&quot;,&quot;scrollMarginBlock&quot;:&quot;&quot;,&quot;scrollMarginBlockEnd&quot;:&quot;&quot;,&quot;scrollMarginBlockStart&quot;:&quot;&quot;,&quot;scrollMarginBottom&quot;:&quot;&quot;,&quot;scrollMarginInline&quot;:&quot;&quot;,&quot;scrollMarginInlineEnd&quot;:&quot;&quot;,&quot;scrollMarginInlineStart&quot;:&quot;&quot;,&quot;scrollMarginLeft&quot;:&quot;&quot;,&quot;scrollMarginRight&quot;:&quot;&quot;,&quot;scrollMarginTop&quot;:&quot;&quot;,&quot;scrollPadding&quot;:&quot;&quot;,&quot;scrollPaddingBlock&quot;:&quot;&quot;,&quot;scrollPaddingBlockEnd&quot;:&quot;&quot;,&quot;scrollPaddingBlockStart&quot;:&quot;&quot;,&quot;scrollPaddingBottom&quot;:&quot;&quot;,&quot;scrollPaddingInline&quot;:&quot;&quot;,&quot;scrollPaddingInlineEnd&quot;:&quot;&quot;,&quot;scrollPaddingInlineStart&quot;:&quot;&quot;,&quot;scrollPaddingLeft&quot;:&quot;&quot;,&quot;scrollPaddingRight&quot;:&quot;&quot;,&quot;scrollPaddingTop&quot;:&quot;&quot;,&quot;scrollSnapAlign&quot;:&quot;&quot;,&quot;scrollSnapStop&quot;:&quot;&quot;,&quot;scrollSnapType&quot;:&quot;&quot;,&quot;scrollTimeline&quot;:&quot;&quot;,&quot;scrollTimelineAxis&quot;:&quot;&quot;,&quot;scrollTimelineName&quot;:&quot;&quot;,&quot;scrollbarGutter&quot;:&quot;&quot;,&quot;shapeImageThreshold&quot;:&quot;&quot;,&quot;shapeMargin&quot;:&quot;&quot;,&quot;shapeOutside&quot;:&quot;&quot;,&quot;shapeRendering&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizeAdjust&quot;:&quot;&quot;,&quot;speak&quot;:&quot;&quot;,&quot;speakAs&quot;:&quot;&quot;,&quot;src&quot;:&quot;&quot;,&quot;stopColor&quot;:&quot;&quot;,&quot;stopOpacity&quot;:&quot;&quot;,&quot;stroke&quot;:&quot;&quot;,&quot;strokeDasharray&quot;:&quot;&quot;,&quot;strokeDashoffset&quot;:&quot;&quot;,&quot;strokeLinecap&quot;:&quot;&quot;,&quot;strokeLinejoin&quot;:&quot;&quot;,&quot;strokeMiterlimit&quot;:&quot;&quot;,&quot;strokeOpacity&quot;:&quot;&quot;,&quot;strokeWidth&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;symbols&quot;:&quot;&quot;,&quot;syntax&quot;:&quot;&quot;,&quot;system&quot;:&quot;&quot;,&quot;tabSize&quot;:&quot;&quot;,&quot;tableLayout&quot;:&quot;&quot;,&quot;textAlign&quot;:&quot;&quot;,&quot;textAlignLast&quot;:&quot;&quot;,&quot;textAnchor&quot;:&quot;&quot;,&quot;textCombineUpright&quot;:&quot;&quot;,&quot;textDecoration&quot;:&quot;&quot;,&quot;textDecorationColor&quot;:&quot;&quot;,&quot;textDecorationLine&quot;:&quot;&quot;,&quot;textDecorationSkipInk&quot;:&quot;&quot;,&quot;textDecorationStyle&quot;:&quot;&quot;,&quot;textDecorationThickness&quot;:&quot;&quot;,&quot;textEmphasis&quot;:&quot;&quot;,&quot;textEmphasisColor&quot;:&quot;&quot;,&quot;textEmphasisPosition&quot;:&quot;&quot;,&quot;textEmphasisStyle&quot;:&quot;&quot;,&quot;textIndent&quot;:&quot;&quot;,&quot;textOrientation&quot;:&quot;&quot;,&quot;textOverflow&quot;:&quot;&quot;,&quot;textRendering&quot;:&quot;&quot;,&quot;textShadow&quot;:&quot;&quot;,&quot;textSizeAdjust&quot;:&quot;&quot;,&quot;textTransform&quot;:&quot;&quot;,&quot;textUnderlineOffset&quot;:&quot;&quot;,&quot;textUnderlinePosition&quot;:&quot;&quot;,&quot;textWrap&quot;:&quot;&quot;,&quot;timelineScope&quot;:&quot;&quot;,&quot;top&quot;:&quot;&quot;,&quot;touchAction&quot;:&quot;&quot;,&quot;transform&quot;:&quot;&quot;,&quot;transformBox&quot;:&quot;&quot;,&quot;transformOrigin&quot;:&quot;&quot;,&quot;transformStyle&quot;:&quot;&quot;,&quot;transition&quot;:&quot;&quot;,&quot;transitionBehavior&quot;:&quot;&quot;,&quot;transitionDelay&quot;:&quot;&quot;,&quot;transitionDuration&quot;:&quot;&quot;,&quot;transitionProperty&quot;:&quot;&quot;,&quot;transitionTimingFunction&quot;:&quot;&quot;,&quot;translate&quot;:&quot;&quot;,&quot;unicodeBidi&quot;:&quot;&quot;,&quot;unicodeRange&quot;:&quot;&quot;,&quot;userSelect&quot;:&quot;&quot;,&quot;vectorEffect&quot;:&quot;&quot;,&quot;verticalAlign&quot;:&quot;&quot;,&quot;viewTimeline&quot;:&quot;&quot;,&quot;viewTimelineAxis&quot;:&quot;&quot;,&quot;viewTimelineInset&quot;:&quot;&quot;,&quot;viewTimelineName&quot;:&quot;&quot;,&quot;viewTransitionName&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;&quot;,&quot;webkitAlignContent&quot;:&quot;&quot;,&quot;webkitAlignItems&quot;:&quot;&quot;,&quot;webkitAlignSelf&quot;:&quot;&quot;,&quot;webkitAnimation&quot;:&quot;&quot;,&quot;webkitAnimationDelay&quot;:&quot;&quot;,&quot;webkitAnimationDirection&quot;:&quot;&quot;,&quot;webkitAnimationDuration&quot;:&quot;&quot;,&quot;webkitAnimationFillMode&quot;:&quot;&quot;,&quot;webkitAnimationIterationCount&quot;:&quot;&quot;,&quot;webkitAnimationName&quot;:&quot;&quot;,&quot;webkitAnimationPlayState&quot;:&quot;&quot;,&quot;webkitAnimationTimingFunction&quot;:&quot;&quot;,&quot;webkitAppRegion&quot;:&quot;&quot;,&quot;webkitAppearance&quot;:&quot;&quot;,&quot;webkitBackfaceVisibility&quot;:&quot;&quot;,&quot;webkitBackgroundClip&quot;:&quot;&quot;,&quot;webkitBackgroundOrigin&quot;:&quot;&quot;,&quot;webkitBackgroundSize&quot;:&quot;&quot;,&quot;webkitBorderAfter&quot;:&quot;&quot;,&quot;webkitBorderAfterColor&quot;:&quot;&quot;,&quot;webkitBorderAfterStyle&quot;:&quot;&quot;,&quot;webkitBorderAfterWidth&quot;:&quot;&quot;,&quot;webkitBorderBefore&quot;:&quot;&quot;,&quot;webkitBorderBeforeColor&quot;:&quot;&quot;,&quot;webkitBorderBeforeStyle&quot;:&quot;&quot;,&quot;webkitBorderBeforeWidth&quot;:&quot;&quot;,&quot;webkitBorderBottomLeftRadius&quot;:&quot;&quot;,&quot;webkitBorderBottomRightRadius&quot;:&quot;&quot;,&quot;webkitBorderEnd&quot;:&quot;&quot;,&quot;webkitBorderEndColor&quot;:&quot;&quot;,&quot;webkitBorderEndStyle&quot;:&quot;&quot;,&quot;webkitBorderEndWidth&quot;:&quot;&quot;,&quot;webkitBorderHorizontalSpacing&quot;:&quot;&quot;,&quot;webkitBorderImage&quot;:&quot;&quot;,&quot;webkitBorderRadius&quot;:&quot;&quot;,&quot;webkitBorderStart&quot;:&quot;&quot;,&quot;webkitBorderStartColor&quot;:&quot;&quot;,&quot;webkitBorderStartStyle&quot;:&quot;&quot;,&quot;webkitBorderStartWidth&quot;:&quot;&quot;,&quot;webkitBorderTopLeftRadius&quot;:&quot;&quot;,&quot;webkitBorderTopRightRadius&quot;:&quot;&quot;,&quot;webkitBorderVerticalSpacing&quot;:&quot;&quot;,&quot;webkitBoxAlign&quot;:&quot;&quot;,&quot;webkitBoxDecorationBreak&quot;:&quot;&quot;,&quot;webkitBoxDirection&quot;:&quot;&quot;,&quot;webkitBoxFlex&quot;:&quot;&quot;,&quot;webkitBoxOrdinalGroup&quot;:&quot;&quot;,&quot;webkitBoxOrient&quot;:&quot;&quot;,&quot;webkitBoxPack&quot;:&quot;&quot;,&quot;webkitBoxReflect&quot;:&quot;&quot;,&quot;webkitBoxShadow&quot;:&quot;&quot;,&quot;webkitBoxSizing&quot;:&quot;&quot;,&quot;webkitClipPath&quot;:&quot;&quot;,&quot;webkitColumnBreakAfter&quot;:&quot;&quot;,&quot;webkitColumnBreakBefore&quot;:&quot;&quot;,&quot;webkitColumnBreakInside&quot;:&quot;&quot;,&quot;webkitColumnCount&quot;:&quot;&quot;,&quot;webkitColumnGap&quot;:&quot;&quot;,&quot;webkitColumnRule&quot;:&quot;&quot;,&quot;webkitColumnRuleColor&quot;:&quot;&quot;,&quot;webkitColumnRuleStyle&quot;:&quot;&quot;,&quot;webkitColumnRuleWidth&quot;:&quot;&quot;,&quot;webkitColumnSpan&quot;:&quot;&quot;,&quot;webkitColumnWidth&quot;:&quot;&quot;,&quot;webkitColumns&quot;:&quot;&quot;,&quot;webkitFilter&quot;:&quot;&quot;,&quot;webkitFlex&quot;:&quot;&quot;,&quot;webkitFlexBasis&quot;:&quot;&quot;,&quot;webkitFlexDirection&quot;:&quot;&quot;,&quot;webkitFlexFlow&quot;:&quot;&quot;,&quot;webkitFlexGrow&quot;:&quot;&quot;,&quot;webkitFlexShrink&quot;:&quot;&quot;,&quot;webkitFlexWrap&quot;:&quot;&quot;,&quot;webkitFontFeatureSettings&quot;:&quot;&quot;,&quot;webkitFontSmoothing&quot;:&quot;&quot;,&quot;webkitHyphenateCharacter&quot;:&quot;&quot;,&quot;webkitJustifyContent&quot;:&quot;&quot;,&quot;webkitLineBreak&quot;:&quot;&quot;,&quot;webkitLineClamp&quot;:&quot;&quot;,&quot;webkitLocale&quot;:&quot;&quot;,&quot;webkitLogicalHeight&quot;:&quot;&quot;,&quot;webkitLogicalWidth&quot;:&quot;&quot;,&quot;webkitMarginAfter&quot;:&quot;&quot;,&quot;webkitMarginBefore&quot;:&quot;&quot;,&quot;webkitMarginEnd&quot;:&quot;&quot;,&quot;webkitMarginStart&quot;:&quot;&quot;,&quot;webkitMask&quot;:&quot;&quot;,&quot;webkitMaskBoxImage&quot;:&quot;&quot;,&quot;webkitMaskBoxImageOutset&quot;:&quot;&quot;,&quot;webkitMaskBoxImageRepeat&quot;:&quot;&quot;,&quot;webkitMaskBoxImageSlice&quot;:&quot;&quot;,&quot;webkitMaskBoxImageSource&quot;:&quot;&quot;,&quot;webkitMaskBoxImageWidth&quot;:&quot;&quot;,&quot;webkitMaskClip&quot;:&quot;&quot;,&quot;webkitMaskComposite&quot;:&quot;&quot;,&quot;webkitMaskImage&quot;:&quot;&quot;,&quot;webkitMaskOrigin&quot;:&quot;&quot;,&quot;webkitMaskPosition&quot;:&quot;&quot;,&quot;webkitMaskPositionX&quot;:&quot;&quot;,&quot;webkitMaskPositionY&quot;:&quot;&quot;,&quot;webkitMaskRepeat&quot;:&quot;&quot;,&quot;webkitMaskSize&quot;:&quot;&quot;,&quot;webkitMaxLogicalHeight&quot;:&quot;&quot;,&quot;webkitMaxLogicalWidth&quot;:&quot;&quot;,&quot;webkitMinLogicalHeight&quot;:&quot;&quot;,&quot;webkitMinLogicalWidth&quot;:&quot;&quot;,&quot;webkitOpacity&quot;:&quot;&quot;,&quot;webkitOrder&quot;:&quot;&quot;,&quot;webkitPaddingAfter&quot;:&quot;&quot;,&quot;webkitPaddingBefore&quot;:&quot;&quot;,&quot;webkitPaddingEnd&quot;:&quot;&quot;,&quot;webkitPaddingStart&quot;:&quot;&quot;,&quot;webkitPerspective&quot;:&quot;&quot;,&quot;webkitPerspectiveOrigin&quot;:&quot;&quot;,&quot;webkitPerspectiveOriginX&quot;:&quot;&quot;,&quot;webkitPerspectiveOriginY&quot;:&quot;&quot;,&quot;webkitPrintColorAdjust&quot;:&quot;&quot;,&quot;webkitRtlOrdering&quot;:&quot;&quot;,&quot;webkitRubyPosition&quot;:&quot;&quot;,&quot;webkitShapeImageThreshold&quot;:&quot;&quot;,&quot;webkitShapeMargin&quot;:&quot;&quot;,&quot;webkitShapeOutside&quot;:&quot;&quot;,&quot;webkitTapHighlightColor&quot;:&quot;&quot;,&quot;webkitTextCombine&quot;:&quot;&quot;,&quot;webkitTextDecorationsInEffect&quot;:&quot;&quot;,&quot;webkitTextEmphasis&quot;:&quot;&quot;,&quot;webkitTextEmphasisColor&quot;:&quot;&quot;,&quot;webkitTextEmphasisPosition&quot;:&quot;&quot;,&quot;webkitTextEmphasisStyle&quot;:&quot;&quot;,&quot;webkitTextFillColor&quot;:&quot;&quot;,&quot;webkitTextOrientation&quot;:&quot;&quot;,&quot;webkitTextSecurity&quot;:&quot;&quot;,&quot;webkitTextSizeAdjust&quot;:&quot;&quot;,&quot;webkitTextStroke&quot;:&quot;&quot;,&quot;webkitTextStrokeColor&quot;:&quot;&quot;,&quot;webkitTextStrokeWidth&quot;:&quot;&quot;,&quot;webkitTransform&quot;:&quot;&quot;,&quot;webkitTransformOrigin&quot;:&quot;&quot;,&quot;webkitTransformOriginX&quot;:&quot;&quot;,&quot;webkitTransformOriginY&quot;:&quot;&quot;,&quot;webkitTransformOriginZ&quot;:&quot;&quot;,&quot;webkitTransformStyle&quot;:&quot;&quot;,&quot;webkitTransition&quot;:&quot;&quot;,&quot;webkitTransitionDelay&quot;:&quot;&quot;,&quot;webkitTransitionDuration&quot;:&quot;&quot;,&quot;webkitTransitionProperty&quot;:&quot;&quot;,&quot;webkitTransitionTimingFunction&quot;:&quot;&quot;,&quot;webkitUserDrag&quot;:&quot;&quot;,&quot;webkitUserModify&quot;:&quot;&quot;,&quot;webkitUserSelect&quot;:&quot;&quot;,&quot;webkitWritingMode&quot;:&quot;&quot;,&quot;whiteSpace&quot;:&quot;&quot;,&quot;whiteSpaceCollapse&quot;:&quot;&quot;,&quot;widows&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;willChange&quot;:&quot;&quot;,&quot;wordBreak&quot;:&quot;&quot;,&quot;wordSpacing&quot;:&quot;&quot;,&quot;wordWrap&quot;:&quot;&quot;,&quot;writingMode&quot;:&quot;&quot;,&quot;x&quot;:&quot;&quot;,&quot;y&quot;:&quot;&quot;,&quot;zIndex&quot;:&quot;&quot;,&quot;zoom&quot;:&quot;&quot;}" />
+            </attribute>
+            <attribute name="wTabIndex">
+              <ProcessValue datatype="number" value="-1" />
+            </attribute>
+            <attribute name="wInputType">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wAccessKey">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wInnerText">
+              <ProcessValue datatype="text" value="$49.07" />
+            </attribute>
+            <attribute name="wSource">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wTargetAddress">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wAlt">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wPattern">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wRel">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wLinkTarget">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wPlaceholder">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="matchindex">
+              <ProcessValue datatype="number" value="1" />
+            </attribute>
+          </attributes>
+        </element>
+        <element name="Webpage LOGO button [HTML]">
+          <id>f86ceead-5daf-4ecf-a883-e721113af32d</id>
+          <type>WebElement</type>
+          <basetype>WebElement</basetype>
+          <datatype>text</datatype>
+          <diagnose>False</diagnose>
+          <attributes>
+            <attribute name="wX">
+              <ProcessValue datatype="number" value="138" />
+            </attribute>
+            <attribute name="wY">
+              <ProcessValue datatype="number" value="20" />
+            </attribute>
+            <attribute name="wWidth">
+              <ProcessValue datatype="number" value="78" />
+            </attribute>
+            <attribute name="wHeight">
+              <ProcessValue datatype="number" value="24" />
+            </attribute>
+            <attribute name="wClientX">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wClientY">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wClientWidth">
+              <ProcessValue datatype="number" value="78" />
+            </attribute>
+            <attribute name="wClientHeight">
+              <ProcessValue datatype="number" value="24" />
+            </attribute>
+            <attribute name="wOffsetX">
+              <ProcessValue datatype="number" value="74" />
+            </attribute>
+            <attribute name="wOffsetY">
+              <ProcessValue datatype="number" value="-1" />
+            </attribute>
+            <attribute name="wOffsetWidth">
+              <ProcessValue datatype="number" value="78" />
+            </attribute>
+            <attribute name="wOffsetHeight">
+              <ProcessValue datatype="number" value="24" />
+            </attribute>
+            <attribute name="wScrollX">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wScrollY">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wScrollWidth">
+              <ProcessValue datatype="number" value="78" />
+            </attribute>
+            <attribute name="wScrollHeight">
+              <ProcessValue datatype="number" value="25" />
+            </attribute>
+            <attribute name="wElementType" inuse="True">
+              <ProcessValue datatype="text" value="SPAN" />
+            </attribute>
+            <attribute name="wXPath" inuse="True">
+              <ProcessValue datatype="text" value="/HTML[1]/BODY[1]/DIV[2]/HEADER[1]/DIV[2]/DIV[1]/DIV[4]/DIV[1]/A[1]/SPAN[2]" />
+            </attribute>
+            <attribute name="wCssSelector">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wValue">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wPageAddress" comparisontype="Wildcard" inuse="True">
+              <ProcessValue datatype="text" value="https://www.google.com/finance/*" />
+            </attribute>
+            <attribute name="wClass">
+              <ProcessValue datatype="text" value="gb_id gb_9c" />
+            </attribute>
+            <attribute name="wChildCount">
+              <ProcessValue datatype="number" value="0" />
+            </attribute>
+            <attribute name="wIsEditable">
+              <ProcessValue datatype="flag" value="False" />
+            </attribute>
+            <attribute name="wStyle">
+              <ProcessValue datatype="text" value="{&quot;accentColor&quot;:&quot;&quot;,&quot;additiveSymbols&quot;:&quot;&quot;,&quot;alignContent&quot;:&quot;&quot;,&quot;alignItems&quot;:&quot;&quot;,&quot;alignSelf&quot;:&quot;&quot;,&quot;alignmentBaseline&quot;:&quot;&quot;,&quot;all&quot;:&quot;&quot;,&quot;animation&quot;:&quot;&quot;,&quot;animationComposition&quot;:&quot;&quot;,&quot;animationDelay&quot;:&quot;&quot;,&quot;animationDirection&quot;:&quot;&quot;,&quot;animationDuration&quot;:&quot;&quot;,&quot;animationFillMode&quot;:&quot;&quot;,&quot;animationIterationCount&quot;:&quot;&quot;,&quot;animationName&quot;:&quot;&quot;,&quot;animationPlayState&quot;:&quot;&quot;,&quot;animationRange&quot;:&quot;&quot;,&quot;animationRangeEnd&quot;:&quot;&quot;,&quot;animationRangeStart&quot;:&quot;&quot;,&quot;animationTimeline&quot;:&quot;&quot;,&quot;animationTimingFunction&quot;:&quot;&quot;,&quot;appRegion&quot;:&quot;&quot;,&quot;appearance&quot;:&quot;&quot;,&quot;ascentOverride&quot;:&quot;&quot;,&quot;aspectRatio&quot;:&quot;&quot;,&quot;backdropFilter&quot;:&quot;&quot;,&quot;backfaceVisibility&quot;:&quot;&quot;,&quot;background&quot;:&quot;&quot;,&quot;backgroundAttachment&quot;:&quot;&quot;,&quot;backgroundBlendMode&quot;:&quot;&quot;,&quot;backgroundClip&quot;:&quot;&quot;,&quot;backgroundColor&quot;:&quot;&quot;,&quot;backgroundImage&quot;:&quot;&quot;,&quot;backgroundOrigin&quot;:&quot;&quot;,&quot;backgroundPosition&quot;:&quot;&quot;,&quot;backgroundPositionX&quot;:&quot;&quot;,&quot;backgroundPositionY&quot;:&quot;&quot;,&quot;backgroundRepeat&quot;:&quot;&quot;,&quot;backgroundSize&quot;:&quot;&quot;,&quot;basePalette&quot;:&quot;&quot;,&quot;baselineShift&quot;:&quot;&quot;,&quot;baselineSource&quot;:&quot;&quot;,&quot;blockSize&quot;:&quot;&quot;,&quot;border&quot;:&quot;&quot;,&quot;borderBlock&quot;:&quot;&quot;,&quot;borderBlockColor&quot;:&quot;&quot;,&quot;borderBlockEnd&quot;:&quot;&quot;,&quot;borderBlockEndColor&quot;:&quot;&quot;,&quot;borderBlockEndStyle&quot;:&quot;&quot;,&quot;borderBlockEndWidth&quot;:&quot;&quot;,&quot;borderBlockStart&quot;:&quot;&quot;,&quot;borderBlockStartColor&quot;:&quot;&quot;,&quot;borderBlockStartStyle&quot;:&quot;&quot;,&quot;borderBlockStartWidth&quot;:&quot;&quot;,&quot;borderBlockStyle&quot;:&quot;&quot;,&quot;borderBlockWidth&quot;:&quot;&quot;,&quot;borderBottom&quot;:&quot;&quot;,&quot;borderBottomColor&quot;:&quot;&quot;,&quot;borderBottomLeftRadius&quot;:&quot;&quot;,&quot;borderBottomRightRadius&quot;:&quot;&quot;,&quot;borderBottomStyle&quot;:&quot;&quot;,&quot;borderBottomWidth&quot;:&quot;&quot;,&quot;borderCollapse&quot;:&quot;&quot;,&quot;borderColor&quot;:&quot;&quot;,&quot;borderEndEndRadius&quot;:&quot;&quot;,&quot;borderEndStartRadius&quot;:&quot;&quot;,&quot;borderImage&quot;:&quot;&quot;,&quot;borderImageOutset&quot;:&quot;&quot;,&quot;borderImageRepeat&quot;:&quot;&quot;,&quot;borderImageSlice&quot;:&quot;&quot;,&quot;borderImageSource&quot;:&quot;&quot;,&quot;borderImageWidth&quot;:&quot;&quot;,&quot;borderInline&quot;:&quot;&quot;,&quot;borderInlineColor&quot;:&quot;&quot;,&quot;borderInlineEnd&quot;:&quot;&quot;,&quot;borderInlineEndColor&quot;:&quot;&quot;,&quot;borderInlineEndStyle&quot;:&quot;&quot;,&quot;borderInlineEndWidth&quot;:&quot;&quot;,&quot;borderInlineStart&quot;:&quot;&quot;,&quot;borderInlineStartColor&quot;:&quot;&quot;,&quot;borderInlineStartStyle&quot;:&quot;&quot;,&quot;borderInlineStartWidth&quot;:&quot;&quot;,&quot;borderInlineStyle&quot;:&quot;&quot;,&quot;borderInlineWidth&quot;:&quot;&quot;,&quot;borderLeft&quot;:&quot;&quot;,&quot;borderLeftColor&quot;:&quot;&quot;,&quot;borderLeftStyle&quot;:&quot;&quot;,&quot;borderLeftWidth&quot;:&quot;&quot;,&quot;borderRadius&quot;:&quot;&quot;,&quot;borderRight&quot;:&quot;&quot;,&quot;borderRightColor&quot;:&quot;&quot;,&quot;borderRightStyle&quot;:&quot;&quot;,&quot;borderRightWidth&quot;:&quot;&quot;,&quot;borderSpacing&quot;:&quot;&quot;,&quot;borderStartEndRadius&quot;:&quot;&quot;,&quot;borderStartStartRadius&quot;:&quot;&quot;,&quot;borderStyle&quot;:&quot;&quot;,&quot;borderTop&quot;:&quot;&quot;,&quot;borderTopColor&quot;:&quot;&quot;,&quot;borderTopLeftRadius&quot;:&quot;&quot;,&quot;borderTopRightRadius&quot;:&quot;&quot;,&quot;borderTopStyle&quot;:&quot;&quot;,&quot;borderTopWidth&quot;:&quot;&quot;,&quot;borderWidth&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;boxShadow&quot;:&quot;&quot;,&quot;boxSizing&quot;:&quot;&quot;,&quot;breakAfter&quot;:&quot;&quot;,&quot;breakBefore&quot;:&quot;&quot;,&quot;breakInside&quot;:&quot;&quot;,&quot;bufferedRendering&quot;:&quot;&quot;,&quot;captionSide&quot;:&quot;&quot;,&quot;caretColor&quot;:&quot;&quot;,&quot;clear&quot;:&quot;&quot;,&quot;clip&quot;:&quot;&quot;,&quot;clipPath&quot;:&quot;&quot;,&quot;clipRule&quot;:&quot;&quot;,&quot;color&quot;:&quot;&quot;,&quot;colorInterpolation&quot;:&quot;&quot;,&quot;colorInterpolationFilters&quot;:&quot;&quot;,&quot;colorRendering&quot;:&quot;&quot;,&quot;colorScheme&quot;:&quot;&quot;,&quot;columnCount&quot;:&quot;&quot;,&quot;columnFill&quot;:&quot;&quot;,&quot;columnGap&quot;:&quot;&quot;,&quot;columnRule&quot;:&quot;&quot;,&quot;columnRuleColor&quot;:&quot;&quot;,&quot;columnRuleStyle&quot;:&quot;&quot;,&quot;columnRuleWidth&quot;:&quot;&quot;,&quot;columnSpan&quot;:&quot;&quot;,&quot;columnWidth&quot;:&quot;&quot;,&quot;columns&quot;:&quot;&quot;,&quot;contain&quot;:&quot;&quot;,&quot;containIntrinsicBlockSize&quot;:&quot;&quot;,&quot;containIntrinsicHeight&quot;:&quot;&quot;,&quot;containIntrinsicInlineSize&quot;:&quot;&quot;,&quot;containIntrinsicSize&quot;:&quot;&quot;,&quot;containIntrinsicWidth&quot;:&quot;&quot;,&quot;container&quot;:&quot;&quot;,&quot;containerName&quot;:&quot;&quot;,&quot;containerType&quot;:&quot;&quot;,&quot;content&quot;:&quot;&quot;,&quot;contentVisibility&quot;:&quot;&quot;,&quot;counterIncrement&quot;:&quot;&quot;,&quot;counterReset&quot;:&quot;&quot;,&quot;counterSet&quot;:&quot;&quot;,&quot;cursor&quot;:&quot;&quot;,&quot;cx&quot;:&quot;&quot;,&quot;cy&quot;:&quot;&quot;,&quot;d&quot;:&quot;&quot;,&quot;descentOverride&quot;:&quot;&quot;,&quot;direction&quot;:&quot;&quot;,&quot;display&quot;:&quot;&quot;,&quot;dominantBaseline&quot;:&quot;&quot;,&quot;emptyCells&quot;:&quot;&quot;,&quot;fallback&quot;:&quot;&quot;,&quot;fill&quot;:&quot;&quot;,&quot;fillOpacity&quot;:&quot;&quot;,&quot;fillRule&quot;:&quot;&quot;,&quot;filter&quot;:&quot;&quot;,&quot;flex&quot;:&quot;&quot;,&quot;flexBasis&quot;:&quot;&quot;,&quot;flexDirection&quot;:&quot;&quot;,&quot;flexFlow&quot;:&quot;&quot;,&quot;flexGrow&quot;:&quot;&quot;,&quot;flexShrink&quot;:&quot;&quot;,&quot;flexWrap&quot;:&quot;&quot;,&quot;float&quot;:&quot;&quot;,&quot;floodColor&quot;:&quot;&quot;,&quot;floodOpacity&quot;:&quot;&quot;,&quot;font&quot;:&quot;&quot;,&quot;fontDisplay&quot;:&quot;&quot;,&quot;fontFamily&quot;:&quot;&quot;,&quot;fontFeatureSettings&quot;:&quot;&quot;,&quot;fontKerning&quot;:&quot;&quot;,&quot;fontOpticalSizing&quot;:&quot;&quot;,&quot;fontPalette&quot;:&quot;&quot;,&quot;fontSize&quot;:&quot;&quot;,&quot;fontStretch&quot;:&quot;&quot;,&quot;fontStyle&quot;:&quot;&quot;,&quot;fontSynthesis&quot;:&quot;&quot;,&quot;fontSynthesisSmallCaps&quot;:&quot;&quot;,&quot;fontSynthesisStyle&quot;:&quot;&quot;,&quot;fontSynthesisWeight&quot;:&quot;&quot;,&quot;fontVariant&quot;:&quot;&quot;,&quot;fontVariantAlternates&quot;:&quot;&quot;,&quot;fontVariantCaps&quot;:&quot;&quot;,&quot;fontVariantEastAsian&quot;:&quot;&quot;,&quot;fontVariantLigatures&quot;:&quot;&quot;,&quot;fontVariantNumeric&quot;:&quot;&quot;,&quot;fontVariantPosition&quot;:&quot;&quot;,&quot;fontVariationSettings&quot;:&quot;&quot;,&quot;fontWeight&quot;:&quot;&quot;,&quot;forcedColorAdjust&quot;:&quot;&quot;,&quot;gap&quot;:&quot;&quot;,&quot;grid&quot;:&quot;&quot;,&quot;gridArea&quot;:&quot;&quot;,&quot;gridAutoColumns&quot;:&quot;&quot;,&quot;gridAutoFlow&quot;:&quot;&quot;,&quot;gridAutoRows&quot;:&quot;&quot;,&quot;gridColumn&quot;:&quot;&quot;,&quot;gridColumnEnd&quot;:&quot;&quot;,&quot;gridColumnGap&quot;:&quot;&quot;,&quot;gridColumnStart&quot;:&quot;&quot;,&quot;gridGap&quot;:&quot;&quot;,&quot;gridRow&quot;:&quot;&quot;,&quot;gridRowEnd&quot;:&quot;&quot;,&quot;gridRowGap&quot;:&quot;&quot;,&quot;gridRowStart&quot;:&quot;&quot;,&quot;gridTemplate&quot;:&quot;&quot;,&quot;gridTemplateAreas&quot;:&quot;&quot;,&quot;gridTemplateColumns&quot;:&quot;&quot;,&quot;gridTemplateRows&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;,&quot;hyphenateCharacter&quot;:&quot;&quot;,&quot;hyphenateLimitChars&quot;:&quot;&quot;,&quot;hyphens&quot;:&quot;&quot;,&quot;imageOrientation&quot;:&quot;&quot;,&quot;imageRendering&quot;:&quot;&quot;,&quot;inherits&quot;:&quot;&quot;,&quot;initialLetter&quot;:&quot;&quot;,&quot;initialValue&quot;:&quot;&quot;,&quot;inlineSize&quot;:&quot;&quot;,&quot;inset&quot;:&quot;&quot;,&quot;insetBlock&quot;:&quot;&quot;,&quot;insetBlockEnd&quot;:&quot;&quot;,&quot;insetBlockStart&quot;:&quot;&quot;,&quot;insetInline&quot;:&quot;&quot;,&quot;insetInlineEnd&quot;:&quot;&quot;,&quot;insetInlineStart&quot;:&quot;&quot;,&quot;isolation&quot;:&quot;&quot;,&quot;justifyContent&quot;:&quot;&quot;,&quot;justifyItems&quot;:&quot;&quot;,&quot;justifySelf&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;letterSpacing&quot;:&quot;&quot;,&quot;lightingColor&quot;:&quot;&quot;,&quot;lineBreak&quot;:&quot;&quot;,&quot;lineGapOverride&quot;:&quot;&quot;,&quot;lineHeight&quot;:&quot;&quot;,&quot;listStyle&quot;:&quot;&quot;,&quot;listStyleImage&quot;:&quot;&quot;,&quot;listStylePosition&quot;:&quot;&quot;,&quot;listStyleType&quot;:&quot;&quot;,&quot;margin&quot;:&quot;&quot;,&quot;marginBlock&quot;:&quot;&quot;,&quot;marginBlockEnd&quot;:&quot;&quot;,&quot;marginBlockStart&quot;:&quot;&quot;,&quot;marginBottom&quot;:&quot;&quot;,&quot;marginInline&quot;:&quot;&quot;,&quot;marginInlineEnd&quot;:&quot;&quot;,&quot;marginInlineStart&quot;:&quot;&quot;,&quot;marginLeft&quot;:&quot;&quot;,&quot;marginRight&quot;:&quot;&quot;,&quot;marginTop&quot;:&quot;&quot;,&quot;marker&quot;:&quot;&quot;,&quot;markerEnd&quot;:&quot;&quot;,&quot;markerMid&quot;:&quot;&quot;,&quot;markerStart&quot;:&quot;&quot;,&quot;mask&quot;:&quot;&quot;,&quot;maskClip&quot;:&quot;&quot;,&quot;maskComposite&quot;:&quot;&quot;,&quot;maskImage&quot;:&quot;&quot;,&quot;maskMode&quot;:&quot;&quot;,&quot;maskOrigin&quot;:&quot;&quot;,&quot;maskPosition&quot;:&quot;&quot;,&quot;maskRepeat&quot;:&quot;&quot;,&quot;maskSize&quot;:&quot;&quot;,&quot;maskType&quot;:&quot;&quot;,&quot;mathDepth&quot;:&quot;&quot;,&quot;mathShift&quot;:&quot;&quot;,&quot;mathStyle&quot;:&quot;&quot;,&quot;maxBlockSize&quot;:&quot;&quot;,&quot;maxHeight&quot;:&quot;&quot;,&quot;maxInlineSize&quot;:&quot;&quot;,&quot;maxWidth&quot;:&quot;&quot;,&quot;minBlockSize&quot;:&quot;&quot;,&quot;minHeight&quot;:&quot;&quot;,&quot;minInlineSize&quot;:&quot;&quot;,&quot;minWidth&quot;:&quot;&quot;,&quot;mixBlendMode&quot;:&quot;&quot;,&quot;negative&quot;:&quot;&quot;,&quot;objectFit&quot;:&quot;&quot;,&quot;objectPosition&quot;:&quot;&quot;,&quot;objectViewBox&quot;:&quot;&quot;,&quot;offset&quot;:&quot;&quot;,&quot;offsetAnchor&quot;:&quot;&quot;,&quot;offsetDistance&quot;:&quot;&quot;,&quot;offsetPath&quot;:&quot;&quot;,&quot;offsetPosition&quot;:&quot;&quot;,&quot;offsetRotate&quot;:&quot;&quot;,&quot;opacity&quot;:&quot;&quot;,&quot;order&quot;:&quot;&quot;,&quot;orphans&quot;:&quot;&quot;,&quot;outline&quot;:&quot;&quot;,&quot;outlineColor&quot;:&quot;&quot;,&quot;outlineOffset&quot;:&quot;&quot;,&quot;outlineStyle&quot;:&quot;&quot;,&quot;outlineWidth&quot;:&quot;&quot;,&quot;overflow&quot;:&quot;&quot;,&quot;overflowAnchor&quot;:&quot;&quot;,&quot;overflowClipMargin&quot;:&quot;&quot;,&quot;overflowWrap&quot;:&quot;&quot;,&quot;overflowX&quot;:&quot;&quot;,&quot;overflowY&quot;:&quot;&quot;,&quot;overlay&quot;:&quot;&quot;,&quot;overrideColors&quot;:&quot;&quot;,&quot;overscrollBehavior&quot;:&quot;&quot;,&quot;overscrollBehaviorBlock&quot;:&quot;&quot;,&quot;overscrollBehaviorInline&quot;:&quot;&quot;,&quot;overscrollBehaviorX&quot;:&quot;&quot;,&quot;overscrollBehaviorY&quot;:&quot;&quot;,&quot;pad&quot;:&quot;&quot;,&quot;padding&quot;:&quot;&quot;,&quot;paddingBlock&quot;:&quot;&quot;,&quot;paddingBlockEnd&quot;:&quot;&quot;,&quot;paddingBlockStart&quot;:&quot;&quot;,&quot;paddingBottom&quot;:&quot;&quot;,&quot;paddingInline&quot;:&quot;&quot;,&quot;paddingInlineEnd&quot;:&quot;&quot;,&quot;paddingInlineStart&quot;:&quot;&quot;,&quot;paddingLeft&quot;:&quot;&quot;,&quot;paddingRight&quot;:&quot;&quot;,&quot;paddingTop&quot;:&quot;&quot;,&quot;page&quot;:&quot;&quot;,&quot;pageBreakAfter&quot;:&quot;&quot;,&quot;pageBreakBefore&quot;:&quot;&quot;,&quot;pageBreakInside&quot;:&quot;&quot;,&quot;pageOrientation&quot;:&quot;&quot;,&quot;paintOrder&quot;:&quot;&quot;,&quot;perspective&quot;:&quot;&quot;,&quot;perspectiveOrigin&quot;:&quot;&quot;,&quot;placeContent&quot;:&quot;&quot;,&quot;placeItems&quot;:&quot;&quot;,&quot;placeSelf&quot;:&quot;&quot;,&quot;pointerEvents&quot;:&quot;&quot;,&quot;position&quot;:&quot;&quot;,&quot;prefix&quot;:&quot;&quot;,&quot;quotes&quot;:&quot;&quot;,&quot;r&quot;:&quot;&quot;,&quot;range&quot;:&quot;&quot;,&quot;resize&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;rotate&quot;:&quot;&quot;,&quot;rowGap&quot;:&quot;&quot;,&quot;rubyPosition&quot;:&quot;&quot;,&quot;rx&quot;:&quot;&quot;,&quot;ry&quot;:&quot;&quot;,&quot;scale&quot;:&quot;&quot;,&quot;scrollBehavior&quot;:&quot;&quot;,&quot;scrollMargin&quot;:&quot;&quot;,&quot;scrollMarginBlock&quot;:&quot;&quot;,&quot;scrollMarginBlockEnd&quot;:&quot;&quot;,&quot;scrollMarginBlockStart&quot;:&quot;&quot;,&quot;scrollMarginBottom&quot;:&quot;&quot;,&quot;scrollMarginInline&quot;:&quot;&quot;,&quot;scrollMarginInlineEnd&quot;:&quot;&quot;,&quot;scrollMarginInlineStart&quot;:&quot;&quot;,&quot;scrollMarginLeft&quot;:&quot;&quot;,&quot;scrollMarginRight&quot;:&quot;&quot;,&quot;scrollMarginTop&quot;:&quot;&quot;,&quot;scrollPadding&quot;:&quot;&quot;,&quot;scrollPaddingBlock&quot;:&quot;&quot;,&quot;scrollPaddingBlockEnd&quot;:&quot;&quot;,&quot;scrollPaddingBlockStart&quot;:&quot;&quot;,&quot;scrollPaddingBottom&quot;:&quot;&quot;,&quot;scrollPaddingInline&quot;:&quot;&quot;,&quot;scrollPaddingInlineEnd&quot;:&quot;&quot;,&quot;scrollPaddingInlineStart&quot;:&quot;&quot;,&quot;scrollPaddingLeft&quot;:&quot;&quot;,&quot;scrollPaddingRight&quot;:&quot;&quot;,&quot;scrollPaddingTop&quot;:&quot;&quot;,&quot;scrollSnapAlign&quot;:&quot;&quot;,&quot;scrollSnapStop&quot;:&quot;&quot;,&quot;scrollSnapType&quot;:&quot;&quot;,&quot;scrollTimeline&quot;:&quot;&quot;,&quot;scrollTimelineAxis&quot;:&quot;&quot;,&quot;scrollTimelineName&quot;:&quot;&quot;,&quot;scrollbarGutter&quot;:&quot;&quot;,&quot;shapeImageThreshold&quot;:&quot;&quot;,&quot;shapeMargin&quot;:&quot;&quot;,&quot;shapeOutside&quot;:&quot;&quot;,&quot;shapeRendering&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizeAdjust&quot;:&quot;&quot;,&quot;speak&quot;:&quot;&quot;,&quot;speakAs&quot;:&quot;&quot;,&quot;src&quot;:&quot;&quot;,&quot;stopColor&quot;:&quot;&quot;,&quot;stopOpacity&quot;:&quot;&quot;,&quot;stroke&quot;:&quot;&quot;,&quot;strokeDasharray&quot;:&quot;&quot;,&quot;strokeDashoffset&quot;:&quot;&quot;,&quot;strokeLinecap&quot;:&quot;&quot;,&quot;strokeLinejoin&quot;:&quot;&quot;,&quot;strokeMiterlimit&quot;:&quot;&quot;,&quot;strokeOpacity&quot;:&quot;&quot;,&quot;strokeWidth&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;symbols&quot;:&quot;&quot;,&quot;syntax&quot;:&quot;&quot;,&quot;system&quot;:&quot;&quot;,&quot;tabSize&quot;:&quot;&quot;,&quot;tableLayout&quot;:&quot;&quot;,&quot;textAlign&quot;:&quot;&quot;,&quot;textAlignLast&quot;:&quot;&quot;,&quot;textAnchor&quot;:&quot;&quot;,&quot;textCombineUpright&quot;:&quot;&quot;,&quot;textDecoration&quot;:&quot;&quot;,&quot;textDecorationColor&quot;:&quot;&quot;,&quot;textDecorationLine&quot;:&quot;&quot;,&quot;textDecorationSkipInk&quot;:&quot;&quot;,&quot;textDecorationStyle&quot;:&quot;&quot;,&quot;textDecorationThickness&quot;:&quot;&quot;,&quot;textEmphasis&quot;:&quot;&quot;,&quot;textEmphasisColor&quot;:&quot;&quot;,&quot;textEmphasisPosition&quot;:&quot;&quot;,&quot;textEmphasisStyle&quot;:&quot;&quot;,&quot;textIndent&quot;:&quot;&quot;,&quot;textOrientation&quot;:&quot;&quot;,&quot;textOverflow&quot;:&quot;&quot;,&quot;textRendering&quot;:&quot;&quot;,&quot;textShadow&quot;:&quot;&quot;,&quot;textSizeAdjust&quot;:&quot;&quot;,&quot;textTransform&quot;:&quot;&quot;,&quot;textUnderlineOffset&quot;:&quot;&quot;,&quot;textUnderlinePosition&quot;:&quot;&quot;,&quot;textWrap&quot;:&quot;&quot;,&quot;timelineScope&quot;:&quot;&quot;,&quot;top&quot;:&quot;&quot;,&quot;touchAction&quot;:&quot;&quot;,&quot;transform&quot;:&quot;&quot;,&quot;transformBox&quot;:&quot;&quot;,&quot;transformOrigin&quot;:&quot;&quot;,&quot;transformStyle&quot;:&quot;&quot;,&quot;transition&quot;:&quot;&quot;,&quot;transitionBehavior&quot;:&quot;&quot;,&quot;transitionDelay&quot;:&quot;&quot;,&quot;transitionDuration&quot;:&quot;&quot;,&quot;transitionProperty&quot;:&quot;&quot;,&quot;transitionTimingFunction&quot;:&quot;&quot;,&quot;translate&quot;:&quot;&quot;,&quot;unicodeBidi&quot;:&quot;&quot;,&quot;unicodeRange&quot;:&quot;&quot;,&quot;userSelect&quot;:&quot;&quot;,&quot;vectorEffect&quot;:&quot;&quot;,&quot;verticalAlign&quot;:&quot;&quot;,&quot;viewTimeline&quot;:&quot;&quot;,&quot;viewTimelineAxis&quot;:&quot;&quot;,&quot;viewTimelineInset&quot;:&quot;&quot;,&quot;viewTimelineName&quot;:&quot;&quot;,&quot;viewTransitionName&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;&quot;,&quot;webkitAlignContent&quot;:&quot;&quot;,&quot;webkitAlignItems&quot;:&quot;&quot;,&quot;webkitAlignSelf&quot;:&quot;&quot;,&quot;webkitAnimation&quot;:&quot;&quot;,&quot;webkitAnimationDelay&quot;:&quot;&quot;,&quot;webkitAnimationDirection&quot;:&quot;&quot;,&quot;webkitAnimationDuration&quot;:&quot;&quot;,&quot;webkitAnimationFillMode&quot;:&quot;&quot;,&quot;webkitAnimationIterationCount&quot;:&quot;&quot;,&quot;webkitAnimationName&quot;:&quot;&quot;,&quot;webkitAnimationPlayState&quot;:&quot;&quot;,&quot;webkitAnimationTimingFunction&quot;:&quot;&quot;,&quot;webkitAppRegion&quot;:&quot;&quot;,&quot;webkitAppearance&quot;:&quot;&quot;,&quot;webkitBackfaceVisibility&quot;:&quot;&quot;,&quot;webkitBackgroundClip&quot;:&quot;&quot;,&quot;webkitBackgroundOrigin&quot;:&quot;&quot;,&quot;webkitBackgroundSize&quot;:&quot;&quot;,&quot;webkitBorderAfter&quot;:&quot;&quot;,&quot;webkitBorderAfterColor&quot;:&quot;&quot;,&quot;webkitBorderAfterStyle&quot;:&quot;&quot;,&quot;webkitBorderAfterWidth&quot;:&quot;&quot;,&quot;webkitBorderBefore&quot;:&quot;&quot;,&quot;webkitBorderBeforeColor&quot;:&quot;&quot;,&quot;webkitBorderBeforeStyle&quot;:&quot;&quot;,&quot;webkitBorderBeforeWidth&quot;:&quot;&quot;,&quot;webkitBorderBottomLeftRadius&quot;:&quot;&quot;,&quot;webkitBorderBottomRightRadius&quot;:&quot;&quot;,&quot;webkitBorderEnd&quot;:&quot;&quot;,&quot;webkitBorderEndColor&quot;:&quot;&quot;,&quot;webkitBorderEndStyle&quot;:&quot;&quot;,&quot;webkitBorderEndWidth&quot;:&quot;&quot;,&quot;webkitBorderHorizontalSpacing&quot;:&quot;&quot;,&quot;webkitBorderImage&quot;:&quot;&quot;,&quot;webkitBorderRadius&quot;:&quot;&quot;,&quot;webkitBorderStart&quot;:&quot;&quot;,&quot;webkitBorderStartColor&quot;:&quot;&quot;,&quot;webkitBorderStartStyle&quot;:&quot;&quot;,&quot;webkitBorderStartWidth&quot;:&quot;&quot;,&quot;webkitBorderTopLeftRadius&quot;:&quot;&quot;,&quot;webkitBorderTopRightRadius&quot;:&quot;&quot;,&quot;webkitBorderVerticalSpacing&quot;:&quot;&quot;,&quot;webkitBoxAlign&quot;:&quot;&quot;,&quot;webkitBoxDecorationBreak&quot;:&quot;&quot;,&quot;webkitBoxDirection&quot;:&quot;&quot;,&quot;webkitBoxFlex&quot;:&quot;&quot;,&quot;webkitBoxOrdinalGroup&quot;:&quot;&quot;,&quot;webkitBoxOrient&quot;:&quot;&quot;,&quot;webkitBoxPack&quot;:&quot;&quot;,&quot;webkitBoxReflect&quot;:&quot;&quot;,&quot;webkitBoxShadow&quot;:&quot;&quot;,&quot;webkitBoxSizing&quot;:&quot;&quot;,&quot;webkitClipPath&quot;:&quot;&quot;,&quot;webkitColumnBreakAfter&quot;:&quot;&quot;,&quot;webkitColumnBreakBefore&quot;:&quot;&quot;,&quot;webkitColumnBreakInside&quot;:&quot;&quot;,&quot;webkitColumnCount&quot;:&quot;&quot;,&quot;webkitColumnGap&quot;:&quot;&quot;,&quot;webkitColumnRule&quot;:&quot;&quot;,&quot;webkitColumnRuleColor&quot;:&quot;&quot;,&quot;webkitColumnRuleStyle&quot;:&quot;&quot;,&quot;webkitColumnRuleWidth&quot;:&quot;&quot;,&quot;webkitColumnSpan&quot;:&quot;&quot;,&quot;webkitColumnWidth&quot;:&quot;&quot;,&quot;webkitColumns&quot;:&quot;&quot;,&quot;webkitFilter&quot;:&quot;&quot;,&quot;webkitFlex&quot;:&quot;&quot;,&quot;webkitFlexBasis&quot;:&quot;&quot;,&quot;webkitFlexDirection&quot;:&quot;&quot;,&quot;webkitFlexFlow&quot;:&quot;&quot;,&quot;webkitFlexGrow&quot;:&quot;&quot;,&quot;webkitFlexShrink&quot;:&quot;&quot;,&quot;webkitFlexWrap&quot;:&quot;&quot;,&quot;webkitFontFeatureSettings&quot;:&quot;&quot;,&quot;webkitFontSmoothing&quot;:&quot;&quot;,&quot;webkitHyphenateCharacter&quot;:&quot;&quot;,&quot;webkitJustifyContent&quot;:&quot;&quot;,&quot;webkitLineBreak&quot;:&quot;&quot;,&quot;webkitLineClamp&quot;:&quot;&quot;,&quot;webkitLocale&quot;:&quot;&quot;,&quot;webkitLogicalHeight&quot;:&quot;&quot;,&quot;webkitLogicalWidth&quot;:&quot;&quot;,&quot;webkitMarginAfter&quot;:&quot;&quot;,&quot;webkitMarginBefore&quot;:&quot;&quot;,&quot;webkitMarginEnd&quot;:&quot;&quot;,&quot;webkitMarginStart&quot;:&quot;&quot;,&quot;webkitMask&quot;:&quot;&quot;,&quot;webkitMaskBoxImage&quot;:&quot;&quot;,&quot;webkitMaskBoxImageOutset&quot;:&quot;&quot;,&quot;webkitMaskBoxImageRepeat&quot;:&quot;&quot;,&quot;webkitMaskBoxImageSlice&quot;:&quot;&quot;,&quot;webkitMaskBoxImageSource&quot;:&quot;&quot;,&quot;webkitMaskBoxImageWidth&quot;:&quot;&quot;,&quot;webkitMaskClip&quot;:&quot;&quot;,&quot;webkitMaskComposite&quot;:&quot;&quot;,&quot;webkitMaskImage&quot;:&quot;&quot;,&quot;webkitMaskOrigin&quot;:&quot;&quot;,&quot;webkitMaskPosition&quot;:&quot;&quot;,&quot;webkitMaskPositionX&quot;:&quot;&quot;,&quot;webkitMaskPositionY&quot;:&quot;&quot;,&quot;webkitMaskRepeat&quot;:&quot;&quot;,&quot;webkitMaskSize&quot;:&quot;&quot;,&quot;webkitMaxLogicalHeight&quot;:&quot;&quot;,&quot;webkitMaxLogicalWidth&quot;:&quot;&quot;,&quot;webkitMinLogicalHeight&quot;:&quot;&quot;,&quot;webkitMinLogicalWidth&quot;:&quot;&quot;,&quot;webkitOpacity&quot;:&quot;&quot;,&quot;webkitOrder&quot;:&quot;&quot;,&quot;webkitPaddingAfter&quot;:&quot;&quot;,&quot;webkitPaddingBefore&quot;:&quot;&quot;,&quot;webkitPaddingEnd&quot;:&quot;&quot;,&quot;webkitPaddingStart&quot;:&quot;&quot;,&quot;webkitPerspective&quot;:&quot;&quot;,&quot;webkitPerspectiveOrigin&quot;:&quot;&quot;,&quot;webkitPerspectiveOriginX&quot;:&quot;&quot;,&quot;webkitPerspectiveOriginY&quot;:&quot;&quot;,&quot;webkitPrintColorAdjust&quot;:&quot;&quot;,&quot;webkitRtlOrdering&quot;:&quot;&quot;,&quot;webkitRubyPosition&quot;:&quot;&quot;,&quot;webkitShapeImageThreshold&quot;:&quot;&quot;,&quot;webkitShapeMargin&quot;:&quot;&quot;,&quot;webkitShapeOutside&quot;:&quot;&quot;,&quot;webkitTapHighlightColor&quot;:&quot;&quot;,&quot;webkitTextCombine&quot;:&quot;&quot;,&quot;webkitTextDecorationsInEffect&quot;:&quot;&quot;,&quot;webkitTextEmphasis&quot;:&quot;&quot;,&quot;webkitTextEmphasisColor&quot;:&quot;&quot;,&quot;webkitTextEmphasisPosition&quot;:&quot;&quot;,&quot;webkitTextEmphasisStyle&quot;:&quot;&quot;,&quot;webkitTextFillColor&quot;:&quot;&quot;,&quot;webkitTextOrientation&quot;:&quot;&quot;,&quot;webkitTextSecurity&quot;:&quot;&quot;,&quot;webkitTextSizeAdjust&quot;:&quot;&quot;,&quot;webkitTextStroke&quot;:&quot;&quot;,&quot;webkitTextStrokeColor&quot;:&quot;&quot;,&quot;webkitTextStrokeWidth&quot;:&quot;&quot;,&quot;webkitTransform&quot;:&quot;&quot;,&quot;webkitTransformOrigin&quot;:&quot;&quot;,&quot;webkitTransformOriginX&quot;:&quot;&quot;,&quot;webkitTransformOriginY&quot;:&quot;&quot;,&quot;webkitTransformOriginZ&quot;:&quot;&quot;,&quot;webkitTransformStyle&quot;:&quot;&quot;,&quot;webkitTransition&quot;:&quot;&quot;,&quot;webkitTransitionDelay&quot;:&quot;&quot;,&quot;webkitTransitionDuration&quot;:&quot;&quot;,&quot;webkitTransitionProperty&quot;:&quot;&quot;,&quot;webkitTransitionTimingFunction&quot;:&quot;&quot;,&quot;webkitUserDrag&quot;:&quot;&quot;,&quot;webkitUserModify&quot;:&quot;&quot;,&quot;webkitUserSelect&quot;:&quot;&quot;,&quot;webkitWritingMode&quot;:&quot;&quot;,&quot;whiteSpace&quot;:&quot;&quot;,&quot;whiteSpaceCollapse&quot;:&quot;&quot;,&quot;widows&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;willChange&quot;:&quot;&quot;,&quot;wordBreak&quot;:&quot;&quot;,&quot;wordSpacing&quot;:&quot;&quot;,&quot;wordWrap&quot;:&quot;&quot;,&quot;writingMode&quot;:&quot;&quot;,&quot;x&quot;:&quot;&quot;,&quot;y&quot;:&quot;&quot;,&quot;zIndex&quot;:&quot;&quot;,&quot;zoom&quot;:&quot;&quot;}" />
+            </attribute>
+            <attribute name="wTabIndex">
+              <ProcessValue datatype="number" value="-1" />
+            </attribute>
+            <attribute name="wInputType">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wAccessKey">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wInnerText" inuse="True">
+              <ProcessValue datatype="text" value="Finance" />
+            </attribute>
+            <attribute name="wSource">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wTargetAddress">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wAlt">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wPattern">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wRel">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wLinkTarget">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="wPlaceholder">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="matchindex">
+              <ProcessValue datatype="number" value="1" />
+            </attribute>
+          </attributes>
+        </element>
+        <type>Window</type>
+        <basetype>Window</basetype>
+        <datatype>text</datatype>
+        <diagnose>False</diagnose>
+        <attributes>
+          <attribute name="WindowText" inuse="True">
+            <ProcessValue datatype="text" value="Chrome Legacy Window" />
+          </attribute>
+          <attribute name="ClassName" inuse="True">
+            <ProcessValue datatype="text" value="Chrome_RenderWidgetHostHWND" />
+          </attribute>
+          <attribute name="CtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="X">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="Y">
+            <ProcessValue datatype="number" value="93" />
+          </attribute>
+          <attribute name="Width">
+            <ProcessValue datatype="number" value="1849" />
+          </attribute>
+          <attribute name="Height">
+            <ProcessValue datatype="number" value="930" />
+          </attribute>
+          <attribute name="Visible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="ScreenVisible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Enabled" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Active">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="Ordinal">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="ChildCount">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="AncestorsText">
+            <ProcessValue datatype="text" value="BHP $49.07 (▼1.03%) BHP Group Ltd | Google Finance - Personal - Microsoft​ Edge &lt;UNKNOWN&gt; " />
+          </attribute>
+          <attribute name="AncestorCount">
+            <ProcessValue datatype="number" value="2" />
+          </attribute>
+          <attribute name="TypeName">
+            <ProcessValue datatype="text" value="Chrome_RenderWidgetHostHWND" />
+          </attribute>
+          <attribute name="ScreenBounds">
+            <ProcessValue datatype="text" value="RECT:0,93,1022,1848" />
+          </attribute>
+          <attribute name="Style">
+            <ProcessValue datatype="number" value="1445986304" />
+          </attribute>
+          <attribute name="pWindowText" comparisontype="Wildcard" inuse="True">
+            <ProcessValue datatype="text" value="*|*Google*Finance*" />
+          </attribute>
+          <attribute name="pClassName">
+            <ProcessValue datatype="text" value="Chrome_WidgetWin_1" />
+          </attribute>
+          <attribute name="pCtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="pX">
+            <ProcessValue datatype="number" value="-9" />
+          </attribute>
+          <attribute name="pY">
+            <ProcessValue datatype="number" value="-9" />
+          </attribute>
+          <attribute name="pWidth">
+            <ProcessValue datatype="number" value="1939" />
+          </attribute>
+          <attribute name="pHeight">
+            <ProcessValue datatype="number" value="1039" />
+          </attribute>
+          <attribute name="pVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pScreenVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pEnabled">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pActive">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pOrdinal">
+            <ProcessValue datatype="number" value="2" />
+          </attribute>
+          <attribute name="pChildCount">
+            <ProcessValue datatype="number" value="3" />
+          </attribute>
+          <attribute name="pChecked">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="pStyle">
+            <ProcessValue datatype="number" value="1445986304" />
+          </attribute>
+          <attribute name="matchindex">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="matchreverse">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+        </attributes>
+      </element>
+      <element name="Browser Back Button [UIA]">
+        <id>5ec51251-efc8-41c0-9e22-63dd5fd2fef5</id>
+        <type>UIAButton</type>
+        <basetype>UIAButton</basetype>
+        <datatype>text</datatype>
+        <diagnose>False</diagnose>
+        <attributes>
+          <attribute name="uX">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="uY">
+            <ProcessValue datatype="number" value="47" />
+          </attribute>
+          <attribute name="uWidth">
+            <ProcessValue datatype="number" value="63" />
+          </attribute>
+          <attribute name="uHeight">
+            <ProcessValue datatype="number" value="40" />
+          </attribute>
+          <attribute name="uClassName">
+            <ProcessValue datatype="text" value="BackForwardButton" />
+          </attribute>
+          <attribute name="uAutomationId" inuse="True">
+            <ProcessValue datatype="text" value="view_1001" />
+          </attribute>
+          <attribute name="uControlType" inuse="True">
+            <ProcessValue datatype="text" value="Button" />
+          </attribute>
+          <attribute name="uLocalizedControlType">
+            <ProcessValue datatype="text" value="button" />
+          </attribute>
+          <attribute name="uIsPassword">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="uIsRequiredForForm">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="uName" inuse="True">
+            <ProcessValue datatype="text" value="Back" />
+          </attribute>
+          <attribute name="uOrientation">
+            <ProcessValue datatype="text" value="None" />
+          </attribute>
+          <attribute name="uItemStatus">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="uItemType">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="uOffscreen">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="uTopLevelWindowId">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="uLabeledBy">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="uEnabled">
+            <ProcessValue datatype="text" value="True" />
+          </attribute>
+          <attribute name="uAcceleratorKey">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="uAccessKey">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="uHasKeyboardFocus">
+            <ProcessValue datatype="text" value="False" />
+          </attribute>
+          <attribute name="uHelpText">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="uProcessId">
+            <ProcessValue datatype="text" value="888" />
+          </attribute>
+          <attribute name="puControlType">
+            <ProcessValue datatype="text" value="Pane" />
+          </attribute>
+          <attribute name="puLocalizedControlType">
+            <ProcessValue datatype="text" value="region" />
+          </attribute>
+          <attribute name="puClassName">
+            <ProcessValue datatype="text" value="ToolbarView::ContainerView" />
+          </attribute>
+          <attribute name="puName">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="puAutomationId">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="matchindex">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+        </attributes>
+      </element>
+      <type>Application</type>
+      <basetype>Application</basetype>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+    <apptypeinfo>
+      <id>BrowserAttach</id>
+      <parameters>
+        <parameter>
+          <name>WindowTitle</name>
+          <value>*Google*Finance*</value>
+        </parameter>
+        <parameter>
+          <name>Path</name>
+          <value>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe</value>
+        </parameter>
+        <parameter>
+          <name>CommandLineParams</name>
+          <value>
+          </value>
+        </parameter>
+        <parameter>
+          <name>ProcessMode</name>
+          <value>Internal</value>
+        </parameter>
+        <parameter>
+          <name>ExternalProcessTimeout</name>
+          <value>0</value>
+        </parameter>
+      </parameters>
+    </apptypeinfo>
+  </appdef>
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="253a3212-998a-4fcf-b1f0-8e950efa95db" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="73f9c4d1-044b-48db-8cb8-07d2397a767b" type="Normal" published="False">
+    <name>attach</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.875</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="b8253a9f-bafc-4659-a0fa-3b85de649479" type="Normal" published="True">
+    <name>Get Share Price</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>2</cameray>
+      <zoom version="2">2.1875</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="23b82a21-de4c-4abb-bce2-f70fdd0796e8" type="Normal" published="True">
+    <name>Click Home Button</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">2.1875</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="4e3af630-749d-450c-bcbe-5c43f8397e56" type="Normal" published="True">
+    <name>Click Back Button to go to Home Page</name>
+    <view>
+      <camerax>45</camerax>
+      <cameray>6</cameray>
+      <zoom version="2">1.875</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="3f263180-3b0d-4354-9332-d72d4d1e7a5a" name="Start" type="Start">
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>098af123-811c-415b-b440-a8749219f6f4</onsuccess>
+  </stage>
+  <stage stageid="098af123-811c-415b-b440-a8749219f6f4" name="End" type="End">
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="460b2a54-aa6c-46b9-b1b2-380c19815cf2" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+    <references>
+      <reference>System.dll</reference>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>System.Drawing.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Drawing</import>
+      <import>System.Data</import>
+    </imports>
+    <language>visualbasic</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[]]></code>
+  </stage>
+  <stage stageid="f3d36de8-a041-41ea-9e45-f3ccffca48c4" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>253a3212-998a-4fcf-b1f0-8e950efa95db</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="34a9c002-93e0-4b1f-9e7f-5eab2616a9a4" name="Start" type="Start">
+    <subsheetid>253a3212-998a-4fcf-b1f0-8e950efa95db</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>9f309c10-75dc-46d1-aa26-c2e222f5d2eb</onsuccess>
+  </stage>
+  <stage stageid="9f309c10-75dc-46d1-aa26-c2e222f5d2eb" name="End" type="End">
+    <subsheetid>253a3212-998a-4fcf-b1f0-8e950efa95db</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="4ac0fc21-bbc3-4887-a6cf-6f128d9e3267" name="attach" type="SubSheetInfo">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <display x="-330" y="-150" w="240" h="60" />
+  </stage>
+  <stage stageid="c4b74c3b-7e4b-4878-b276-d4d67193eb69" name="Start" type="Start">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-45" y="-150" w="90" h="30" />
+    <onsuccess>f98bdb80-552e-4a8b-a8b6-8a69def80bc4</onsuccess>
+  </stage>
+  <stage stageid="a6ac8b40-dbf8-42f6-a3df-b83686d5439e" name="End" type="End">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-45" y="150" />
+  </stage>
+  <stage stageid="5cadc01d-c3bf-45ad-818b-a18a883a8174" name="" type="Note">
+    <subsheetid>253a3212-998a-4fcf-b1f0-8e950efa95db</subsheetid>
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="00d7dba2-c35c-4b9e-8523-78772d86f64c" name="" type="Note">
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="cbc697a0-2457-4bc4-a23e-a913b8b1ea36" name="Get Share Price" type="SubSheetInfo">
+    <subsheetid>b8253a9f-bafc-4659-a0fa-3b85de649479</subsheetid>
+    <display x="-300" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="6a543b20-2274-4438-99fe-6f50bfa390a2" name="Start" type="Start">
+    <subsheetid>b8253a9f-bafc-4659-a0fa-3b85de649479</subsheetid>
+    <loginhibit />
+    <display x="-165" y="-105" />
+    <onsuccess>61d6192a-7de1-46a3-a10b-5fa0099401f7</onsuccess>
+  </stage>
+  <stage stageid="bfdf0fa8-401a-4e2e-be3d-779f926beef8" name="End" type="End">
+    <subsheetid>b8253a9f-bafc-4659-a0fa-3b85de649479</subsheetid>
+    <loginhibit />
+    <display x="0" y="120" />
+    <outputs>
+      <output type="text" name="share_price" stage="share_price" />
+    </outputs>
+  </stage>
+  <stage stageid="fd19c3a1-6c27-489e-8403-a60c0eb907bd" name="Click Home Button" type="SubSheetInfo">
+    <subsheetid>23b82a21-de4c-4abb-bce2-f70fdd0796e8</subsheetid>
+    <display x="-300" y="-120" w="150" h="90" />
+  </stage>
+  <stage stageid="32652b59-f0ed-4b09-8c8e-b8c929b5d012" name="Start" type="Start">
+    <subsheetid>23b82a21-de4c-4abb-bce2-f70fdd0796e8</subsheetid>
+    <loginhibit />
+    <display x="-135" y="-135" />
+    <onsuccess>771859f4-0e4d-48ea-a1e5-5c31efc03ea4</onsuccess>
+  </stage>
+  <stage stageid="099bdbff-2a8a-464e-a7e5-889fa193f28c" name="End" type="End">
+    <subsheetid>23b82a21-de4c-4abb-bce2-f70fdd0796e8</subsheetid>
+    <loginhibit />
+    <display x="-75" y="120" />
+  </stage>
+  <stage stageid="2b8441c7-8ead-40d1-ba15-eba29179c735" name="Click Back Button to go to Home Page" type="SubSheetInfo">
+    <subsheetid>4e3af630-749d-450c-bcbe-5c43f8397e56</subsheetid>
+    <display x="-255" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="e53c9443-6ff9-4c93-a10b-78408261bed9" name="Start" type="Start">
+    <subsheetid>4e3af630-749d-450c-bcbe-5c43f8397e56</subsheetid>
+    <loginhibit />
+    <display x="-45" y="-120" />
+    <onsuccess>5fce320c-2a8d-4208-999e-c460e6026ad8</onsuccess>
+  </stage>
+  <stage stageid="235c5490-e453-4475-962c-20282ed00b65" name="End" type="End">
+    <subsheetid>4e3af630-749d-450c-bcbe-5c43f8397e56</subsheetid>
+    <loginhibit />
+    <display x="15" y="135" />
+  </stage>
+  <stage stageid="c8705df1-11fb-40b4-8c19-768d0c53eb30" name="isConnected_flag" type="Data">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-90" w="120" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="499a4e51-ddee-4f06-8a45-bf719ab12b8f" name="attemptCount" type="Data">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-390" y="-90" w="90" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f3387d83-aaf3-4383-8b40-b00888b6fb22" name="maxAttempt" type="Data">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-390" y="-45" w="90" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>3</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f98bdb80-552e-4a8b-a8b6-8a69def80bc4" name="read_isConnected" type="Read">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-45" y="-105" w="120" h="30" />
+    <onsuccess>bed9a5d8-593d-4012-a696-5e605155abe2</onsuccess>
+    <step stage="isConnected_flag">
+      <element id="fb724523-e1ec-4141-968e-10ff1fa8bac8" />
+      <action>
+        <id>IsConnected</id>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="bed9a5d8-593d-4012-a696-5e605155abe2" name="is connected?" type="Decision">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-45" y="-60" w="120" h="30" />
+    <decision expression="[isConnected_flag]" />
+    <ontrue>c2931d53-4771-4af4-9234-c12ab2773753</ontrue>
+    <onfalse>42626915-5ce4-44a9-b27e-5521bbbb990c</onfalse>
+  </stage>
+  <stage stageid="c2931d53-4771-4af4-9234-c12ab2773753" name="Anchor1" type="Anchor">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-180" y="-60" w="10" h="10" />
+    <onsuccess>824fa4c8-1552-4bbe-ae04-6a5189288a6a</onsuccess>
+  </stage>
+  <stage stageid="824fa4c8-1552-4bbe-ae04-6a5189288a6a" name="Anchor2" type="Anchor">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-180" y="150" w="10" h="10" />
+    <onsuccess>a6ac8b40-dbf8-42f6-a3df-b83686d5439e</onsuccess>
+  </stage>
+  <stage stageid="42626915-5ce4-44a9-b27e-5521bbbb990c" name="attemptCount++" type="Calculation">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-45" y="-15" w="90" h="30" />
+    <onsuccess>c22d6f09-8373-4db0-8163-6426765c34cc</onsuccess>
+    <calculation expression="[attemptCount] + 1" stage="attemptCount" />
+  </stage>
+  <stage stageid="c22d6f09-8373-4db0-8163-6426765c34cc" name="attach" type="Navigate">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-45" y="90" />
+    <onsuccess>a6ac8b40-dbf8-42f6-a3df-b83686d5439e</onsuccess>
+    <step>
+      <element id="fb724523-e1ec-4141-968e-10ff1fa8bac8" />
+      <action>
+        <id>AttachApplication</id>
+        <arguments>
+          <argument>
+            <id>WindowTitlesCollection</id>
+            <value>
+            </value>
+          </argument>
+          <argument>
+            <id>WindowTitle</id>
+            <value>[windowTitle]</value>
+          </argument>
+          <argument>
+            <id>ProcessName</id>
+            <value>[processName]</value>
+          </argument>
+          <argument>
+            <id>ProcessID</id>
+            <value>
+            </value>
+          </argument>
+          <argument>
+            <id>Username</id>
+            <value>
+            </value>
+          </argument>
+          <argument>
+            <id>ChildIndex</id>
+            <value>
+            </value>
+          </argument>
+        </arguments>
+        <outputs>
+          <output>
+            <id>trackingid</id>
+            <value>
+            </value>
+          </output>
+        </outputs>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="0b745708-a4a8-4c13-8ade-faa95f75b03c" name="processName" type="Data">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-390" y="15" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">*msedge*</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d205640a-ee08-4354-a63e-4245e978fd49" name="windowTitle" type="Data">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-390" y="60" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">*|*Google*Finance*</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="abe7f92c-1507-4d95-b121-3f53584c06ec" name="Recover" type="Recover">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="165" y="90" />
+    <onsuccess>8f20b308-b394-4eb7-9e54-ce2ec978b0e7</onsuccess>
+  </stage>
+  <stage stageid="8f20b308-b394-4eb7-9e54-ce2ec978b0e7" name="retry?" type="Decision">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="165" y="30" />
+    <decision expression="[attemptCount] &lt;= [maxAttempt]" />
+    <ontrue>c2ce230a-6dff-497e-9f24-5bf866f841f3</ontrue>
+    <onfalse>e20b557c-188a-420b-9954-fe341b097e20</onfalse>
+  </stage>
+  <stage stageid="e20b557c-188a-420b-9954-fe341b097e20" name="Attach Failed" type="Exception">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <display x="300" y="30" w="120" h="30" />
+    <exception localized="yes" type="System Exception" detail="&quot;The attach operation failed after max number of attempts.&quot;" usecurrent="yes" />
+  </stage>
+  <stage stageid="c2ce230a-6dff-497e-9f24-5bf866f841f3" name="Resume" type="Resume">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="165" y="-15" />
+    <onsuccess>a7a36bf1-ff6f-4fd9-954d-a73bfb84843d</onsuccess>
+  </stage>
+  <stage stageid="d5ce151b-27e8-4be9-9f18-a2d66ea15e9a" name="T.O. - 5s" type="WaitEnd">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="45" y="-15" w="30" h="30" />
+    <onsuccess>42626915-5ce4-44a9-b27e-5521bbbb990c</onsuccess>
+    <groupid>f2bebb3f-b7fd-4e0d-8161-c5c9c5fbfe2e</groupid>
+  </stage>
+  <stage stageid="a7a36bf1-ff6f-4fd9-954d-a73bfb84843d" name="5s" type="WaitStart">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="90" y="-15" w="30" h="30" />
+    <groupid>f2bebb3f-b7fd-4e0d-8161-c5c9c5fbfe2e</groupid>
+    <choices />
+    <timeout>5</timeout>
+  </stage>
+  <stage stageid="7240a6b8-4e2f-4232-ae42-74c120e32983" name="Attach Block" type="Block">
+    <subsheetid>73f9c4d1-044b-48db-8cb8-07d2397a767b</subsheetid>
+    <loginhibit />
+    <display x="-150" y="60" w="360" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="00FF00" />
+  </stage>
+  <stage stageid="3438198a-cfc3-49e5-8513-a0525d207ccf" name="share_price" type="Data">
+    <subsheetid>b8253a9f-bafc-4659-a0fa-3b85de649479</subsheetid>
+    <loginhibit />
+    <display x="-330" y="-30" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="19ce9f1f-fbe4-4aac-a0f0-c232adf17d8b" name="Time Out - Check share price label exists" type="WaitEnd">
+    <subsheetid>b8253a9f-bafc-4659-a0fa-3b85de649479</subsheetid>
+    <loginhibit />
+    <display x="60" y="-45" w="60" h="60" />
+    <onsuccess>344440e4-b711-45b3-8e06-327acb71c6a4</onsuccess>
+    <groupid>da8c4400-8a1b-42b5-8e6b-82a5292c59dd</groupid>
+  </stage>
+  <stage stageid="65a41513-2b2d-4f54-aa0f-aabee7040295" name="Check share price label exists" type="WaitStart">
+    <subsheetid>b8253a9f-bafc-4659-a0fa-3b85de649479</subsheetid>
+    <loginhibit />
+    <display x="-60" y="-45" w="60" h="60" />
+    <groupid>da8c4400-8a1b-42b5-8e6b-82a5292c59dd</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Share Price Label [HTML] Check Exists</name>
+        <distance>60</distance>
+        <ontrue>775636c0-9733-4000-87e0-6983382adca8</ontrue>
+        <element id="1b33da5a-9003-4895-953b-5a6b2cef984f" />
+        <condition>
+          <id>WebCheckExists</id>
+          <arguments>
+            <argument>
+              <id>trackingid</id>
+              <value>
+              </value>
+            </argument>
+          </arguments>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>10</timeout>
+  </stage>
+  <stage stageid="61d6192a-7de1-46a3-a10b-5fa0099401f7" name="attach" type="SubSheet">
+    <subsheetid>b8253a9f-bafc-4659-a0fa-3b85de649479</subsheetid>
+    <loginhibit />
+    <display x="-60" y="-105" />
+    <onsuccess>65a41513-2b2d-4f54-aa0f-aabee7040295</onsuccess>
+    <processid>73f9c4d1-044b-48db-8cb8-07d2397a767b</processid>
+  </stage>
+  <stage stageid="344440e4-b711-45b3-8e06-327acb71c6a4" name="Share price couldn't be fetched" type="Exception">
+    <subsheetid>b8253a9f-bafc-4659-a0fa-3b85de649479</subsheetid>
+    <display x="210" y="-45" w="180" h="30" />
+    <exception localized="yes" type="System Exception" detail="&quot;Share price couldn't be fetched.&quot;" />
+  </stage>
+  <stage stageid="775636c0-9733-4000-87e0-6983382adca8" name="Get Share Price" type="Read">
+    <subsheetid>b8253a9f-bafc-4659-a0fa-3b85de649479</subsheetid>
+    <loginhibit />
+    <display x="0" y="60" w="90" h="30" />
+    <onsuccess>bfdf0fa8-401a-4e2e-be3d-779f926beef8</onsuccess>
+    <step stage="share_price">
+      <element id="1b33da5a-9003-4895-953b-5a6b2cef984f" />
+      <action>
+        <id>WebGetText</id>
+        <arguments>
+          <argument>
+            <id>trackingid</id>
+            <value>
+            </value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="771859f4-0e4d-48ea-a1e5-5c31efc03ea4" name="attach" type="SubSheet">
+    <subsheetid>23b82a21-de4c-4abb-bce2-f70fdd0796e8</subsheetid>
+    <loginhibit />
+    <display x="-135" y="-90" />
+    <onsuccess>5acd553e-f146-4d37-9a80-a020b0b3b71e</onsuccess>
+    <processid>73f9c4d1-044b-48db-8cb8-07d2397a767b</processid>
+  </stage>
+  <stage stageid="7abd1676-aacf-432a-85be-1102ad0de182" name="Time Out - Check Home exists" type="WaitEnd">
+    <subsheetid>23b82a21-de4c-4abb-bce2-f70fdd0796e8</subsheetid>
+    <loginhibit />
+    <display x="-15" y="-30" w="60" h="60" />
+    <onsuccess>02d7fd36-4651-4101-9703-e2b2a6cae2a1</onsuccess>
+    <groupid>59c81247-1a55-4733-aa91-25382c7f8908</groupid>
+  </stage>
+  <stage stageid="5acd553e-f146-4d37-9a80-a020b0b3b71e" name="Check Home exists" type="WaitStart">
+    <subsheetid>23b82a21-de4c-4abb-bce2-f70fdd0796e8</subsheetid>
+    <loginhibit />
+    <display x="-135" y="-30" w="60" h="60" />
+    <groupid>59c81247-1a55-4733-aa91-25382c7f8908</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Webpage LOGO button [HTML] Check Exists</name>
+        <distance>60</distance>
+        <ontrue>755d1bb0-a173-4c3b-b42f-ec812649255b</ontrue>
+        <element id="f86ceead-5daf-4ecf-a883-e721113af32d" />
+        <condition>
+          <id>WebCheckExists</id>
+          <arguments>
+            <argument>
+              <id>trackingid</id>
+              <value>
+              </value>
+            </argument>
+          </arguments>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>10</timeout>
+  </stage>
+  <stage stageid="02d7fd36-4651-4101-9703-e2b2a6cae2a1" name="Home button not found" type="Exception">
+    <subsheetid>23b82a21-de4c-4abb-bce2-f70fdd0796e8</subsheetid>
+    <display x="135" y="-30" w="180" h="30" />
+    <exception localized="yes" type="System Exception" detail="&quot;Home button not found&quot;" />
+  </stage>
+  <stage stageid="755d1bb0-a173-4c3b-b42f-ec812649255b" name="Click Home Button" type="Navigate">
+    <subsheetid>23b82a21-de4c-4abb-bce2-f70fdd0796e8</subsheetid>
+    <loginhibit />
+    <display x="-75" y="75" />
+    <onsuccess>099bdbff-2a8a-464e-a7e5-889fa193f28c</onsuccess>
+    <step>
+      <element id="f86ceead-5daf-4ecf-a883-e721113af32d" />
+      <action>
+        <id>WebClick</id>
+        <arguments>
+          <argument>
+            <id>trackingid</id>
+            <value>
+            </value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="5fce320c-2a8d-4208-999e-c460e6026ad8" name="attach" type="SubSheet">
+    <subsheetid>4e3af630-749d-450c-bcbe-5c43f8397e56</subsheetid>
+    <loginhibit />
+    <display x="-45" y="-75" />
+    <onsuccess>4a59a711-64bd-49ba-b12f-4743be8261ca</onsuccess>
+    <processid>73f9c4d1-044b-48db-8cb8-07d2397a767b</processid>
+  </stage>
+  <stage stageid="2fa87f0c-2823-43a2-8267-d827e054620a" name="Time Out - Check if on Stocks page window" type="WaitEnd">
+    <subsheetid>4e3af630-749d-450c-bcbe-5c43f8397e56</subsheetid>
+    <loginhibit />
+    <display x="75" y="-15" w="60" h="60" />
+    <onsuccess>19f2b4a5-7aa0-459e-a198-d1181e79aca6</onsuccess>
+    <groupid>b42ca837-8f4a-4f16-bcac-a500aa8c89fa</groupid>
+  </stage>
+  <stage stageid="4a59a711-64bd-49ba-b12f-4743be8261ca" name="Check if on Stocks page window" type="WaitStart">
+    <subsheetid>4e3af630-749d-450c-bcbe-5c43f8397e56</subsheetid>
+    <loginhibit />
+    <display x="-45" y="-15" w="60" h="60" />
+    <groupid>b42ca837-8f4a-4f16-bcac-a500aa8c89fa</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Share Price Window [win32] Check Exists</name>
+        <distance>60</distance>
+        <ontrue>a3ebc18d-7df8-4149-9e34-20f381dafaec</ontrue>
+        <element id="6092168e-0fac-4b5a-98d9-a4d3fe555477" />
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>5</timeout>
+  </stage>
+  <stage stageid="a3ebc18d-7df8-4149-9e34-20f381dafaec" name="Click Back Button" type="Navigate">
+    <subsheetid>4e3af630-749d-450c-bcbe-5c43f8397e56</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <onsuccess>235c5490-e453-4475-962c-20282ed00b65</onsuccess>
+    <step>
+      <element id="5ec51251-efc8-41c0-9e22-63dd5fd2fef5" />
+      <action>
+        <id>UIAClickCentre</id>
+        <arguments>
+          <argument>
+            <id>newtext</id>
+            <value>
+            </value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="19f2b4a5-7aa0-459e-a198-d1181e79aca6" name="Anchor3" type="Anchor">
+    <subsheetid>4e3af630-749d-450c-bcbe-5c43f8397e56</subsheetid>
+    <loginhibit />
+    <display x="195" y="-15" w="10" h="10" />
+    <onsuccess>d2e71484-853c-47f5-a17e-51da5a93f434</onsuccess>
+  </stage>
+  <stage stageid="d2e71484-853c-47f5-a17e-51da5a93f434" name="Anchor4" type="Anchor">
+    <subsheetid>4e3af630-749d-450c-bcbe-5c43f8397e56</subsheetid>
+    <loginhibit />
+    <display x="195" y="135" w="10" h="10" />
+    <onsuccess>235c5490-e453-4475-962c-20282ed00b65</onsuccess>
+  </stage>
+</process>

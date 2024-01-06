@@ -1,0 +1,83 @@
+﻿<process name="4. Notepad automation - demo3" version="1.0" bpversion="7.2.1.7446" narrative="A process that write’s custom text to Notepad using my own created object/s. Once written, it saves the file to a given directory with the specific naming structure of ddMMyyyy.txt" byrefcollection="true" processrunningmessage="" disableversioning="false" preferredid="569c7742-92d6-460d-a03f-b94be1d5aa0e">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.875</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="84a52684-0791-4d09-9111-d079f004e72a" name="Start" type="Start">
+    <display x="30" y="-165" />
+    <onsuccess>82ff3376-3d28-463f-b9d7-9167a2e589d0</onsuccess>
+  </stage>
+  <stage stageid="b5c92a91-12a8-4143-bd8a-6a130d31b504" name="End" type="End">
+    <display x="30" y="135" />
+  </stage>
+  <stage stageid="ef5a0482-e1b9-4457-bcee-f089118ac30b" name="Stage1" type="ProcessInfo">
+    <display x="-330" y="-150" w="240" h="90" />
+  </stage>
+  <stage stageid="ed6fec94-6487-4cb1-84ff-27faaf7c0ff5" name="text_to_write" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-390" y="-75" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Happy New Year 2024! Bless you....</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="65620062-3335-4c5c-8c81-77baf0388135" name="setCustomPathFlag" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-285" y="-75" w="120" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue>True</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6c161af4-04bd-4558-a6f3-9ac4943a949b" name="folderPath" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-405" y="0" w="90" h="60" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">E:\Data Engineering and Analysis</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1af1f462-d6be-4111-b275-f6c69d5bd747" name="fileName" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-285" y="0" w="90" h="60" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">myFile.txt</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="82ff3376-3d28-463f-b9d7-9167a2e589d0" name="Launch Notepad" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="30" y="-105" />
+    <onsuccess>3541b634-3986-47c5-9be9-e46350971c1f</onsuccess>
+    <resource object="4. Notepad_old VBO" action="Launch Notepad" />
+  </stage>
+  <stage stageid="3541b634-3986-47c5-9be9-e46350971c1f" name="Write Text to App" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="30" y="-45" />
+    <inputs>
+      <input type="text" name="data_to_write" friendlyname="data_to_write" narrative="Pass the text that is to be written into the notepad." expr="[text_to_write]" />
+    </inputs>
+    <onsuccess>c2126914-9c06-4b9e-96fa-490568fd1bed</onsuccess>
+    <resource object="4. Notepad_old VBO" action="Write Text to App" />
+  </stage>
+  <stage stageid="c2126914-9c06-4b9e-96fa-490568fd1bed" name="Save File" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="30" y="15" />
+    <inputs>
+      <input type="flag" name="setCustomPath" friendlyname="setCustomPath" narrative="Set to True to save to any folder of choice." expr="[setCustomPathFlag]" />
+      <input type="text" name="customFolder" friendlyname="customFolder" narrative="Custom folder path excluding filename, where file is to be saved." expr="[folderPath]" />
+      <input type="text" name="fileName" friendlyname="fileName" narrative="Only the filename with extension." expr="[fileName]" />
+    </inputs>
+    <onsuccess>e6bbba6e-3cb8-42ff-b722-7bccba5b2f27</onsuccess>
+    <resource object="4. Notepad_old VBO" action="Save File" />
+  </stage>
+  <stage stageid="e6bbba6e-3cb8-42ff-b722-7bccba5b2f27" name="Close App" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="30" y="75" />
+    <onsuccess>b5c92a91-12a8-4143-bd8a-6a130d31b504</onsuccess>
+    <resource object="4. Notepad_old VBO" action="Close Notepad App" />
+  </stage>
+</process>

@@ -1,0 +1,397 @@
+﻿<process name="3. Validate Stocktake" version="1.0" bpversion="7.2.1.7446" narrative="Load excel file containing data, calculate stock in hand, and send email using MS Outlook VBO" byrefcollection="true" processrunningmessage="" disableversioning="false" preferredid="11c12928-b91f-4161-a5aa-cd2c9e47eda6">
+  <view>
+    <camerax>-43</camerax>
+    <cameray>2</cameray>
+    <zoom version="2">1.875</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="bb80bbb2-4f80-41da-8f82-cebf5f74bd9b" type="Normal" published="False">
+    <name>Configure and send email</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">2.1875</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="d76d6b1f-f091-4a79-8e8e-39d48bc98f38" name="Start" type="Start">
+    <display x="-165" y="-180" />
+    <onsuccess>ed93a724-ae6c-4f95-9fb7-9a35070ca10f</onsuccess>
+  </stage>
+  <stage stageid="bafaa0c6-3a22-4f1b-a855-9356bb38bddb" name="End" type="End">
+    <display x="150" y="180" />
+  </stage>
+  <stage stageid="ff296ad5-62da-49e0-9bb7-989545a03bbf" name="Stage1" type="ProcessInfo">
+    <display x="-390" y="-150" w="210" h="90" />
+  </stage>
+  <stage stageid="ed93a724-ae6c-4f95-9fb7-9a35070ca10f" name="MS Excel VBO::Create Instance" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="-180" w="90" h="30" />
+    <inputs>
+      <input type="flag" name="Enable Events" friendlyname="Enable Events" narrative="Flag to indicate that events should be enabled / disabled on the attached instance - defaulted to True" expr="" />
+    </inputs>
+    <outputs>
+      <output type="number" name="handle" friendlyname="handle" narrative="An integer which can be used to identify the created instance in subsequent actions" stage="excel_handle" />
+    </outputs>
+    <onsuccess>1eba86f7-3494-4c2e-bd08-3cfb08e79098</onsuccess>
+    <resource object="MS Excel VBO" action="Create Instance" />
+  </stage>
+  <stage stageid="7c53b012-8315-45c2-b474-d0a06692c3de" name="excel_handle" type="Data">
+    <display x="-285" y="-75" w="90" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1eba86f7-3494-4c2e-bd08-3cfb08e79098" name="MS Excel VBO::Open Workbook" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="-135" w="90" h="30" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the required workbook should be opened. The default of zero indicates the currently active instance." expr="[excel_handle]" />
+      <input type="text" name="File name" friendlyname="File name" narrative="The path and name of the file which should be opened." expr="[excel_file_path]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name used by Excel to identify the workbook - usually this is the file name (without the path)." stage="Workbook Name" />
+    </outputs>
+    <onsuccess>b09153e5-a7e7-49c4-8469-eaab95289106</onsuccess>
+    <resource object="MS Excel VBO" action="Open Workbook" />
+  </stage>
+  <stage stageid="b09153e5-a7e7-49c4-8469-eaab95289106" name="MS Excel VBO::Get Worksheet As Collection" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="-90" w="120" h="30" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the worksheet which should be retrieved resides. The default of zero indicates the currently active instance." expr="[excel_handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook which contains the sheet required. The default empty text indicates the currently active workbook on the specified instance." expr="[Workbook Name]" />
+      <input type="text" name="Worksheet Name" friendlyname="Worksheet Name" narrative="The name of the worksheet within the specified workbook which should be written to a collection. The default empty text indicates the currently active worksheet within the specified workbook." expr="[excel_sheet_name]" />
+      <input type="text" name="Fetch Data With Method" friendlyname="Fetch Data With Method" narrative="The method used to fetch data from cells in the worksheet. Options include Text, Value, and Value2. The default indicates Value will be used." expr="" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Data" friendlyname="Data" narrative="The collection containing the data from the specified worksheet - the column IDs will be gleaned from the first row on the sheet being retrieved." stage="stock_data" />
+    </outputs>
+    <onsuccess>6284a7cd-cda6-45a2-a994-838c928bfaee</onsuccess>
+    <resource object="MS Excel VBO" action="Get Worksheet As Collection" />
+  </stage>
+  <stage stageid="1366b38e-514d-44f9-89e7-1e80e0a04d45" name="Workbook Name" type="Data">
+    <display x="-285" y="-30" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1c6c4ea3-c6f5-4f72-b691-78771a36a239" name="excel_file_path" type="Data">
+    <display x="-420" y="-60" w="180" h="60" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">E:\Programs &amp; Codes\Blueprism RPA\stocktake.xlsx</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="17cba869-8b8c-422f-8d99-8195d8f8dfa0" name="excel_sheet_name" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-435" y="0" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Sheet1</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="cb3dafcc-890e-4215-a345-950b9f68969c" name="Inventory Total Amount" type="Data">
+    <loginhibit onsuccess="true" />
+    <narrative>This is obtained by adding the total cost per item for all the items.</narrative>
+    <display x="-300" y="60" w="150" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6bc761f9-6197-4a63-b773-6d79d2bb03aa" name="For Each Item" type="LoopStart">
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="0" w="90" h="30" />
+    <onsuccess>4895bd58-7ab8-439c-b70e-0ebeee17fc09</onsuccess>
+    <groupid>95e42301-9aca-4699-898b-ca44226b03df</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>stock_data</loopdata>
+  </stage>
+  <stage stageid="8ec937ee-c0c2-4396-84c1-35c7102f5c4a" name="For Each Item" type="LoopEnd">
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="135" w="90" h="30" />
+    <onsuccess>ca35abba-e3b3-4afa-a5fa-12b3285d8a5e</onsuccess>
+    <groupid>95e42301-9aca-4699-898b-ca44226b03df</groupid>
+  </stage>
+  <stage stageid="4895bd58-7ab8-439c-b70e-0ebeee17fc09" name="Calculate Total Amount per Item" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="45" w="150" h="30" />
+    <onsuccess>2aac533a-eb2e-456d-905d-b65ebbdb4c6d</onsuccess>
+    <calculation expression="ToNumber([stock_data.Cost Per Unit]) * ToNumber([stock_data.Amount])" stage="stock_data.Total Amount" />
+  </stage>
+  <stage stageid="2aac533a-eb2e-456d-905d-b65ebbdb4c6d" name="Add Total Item to Inventory Total" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="90" w="150" h="30" />
+    <onsuccess>8ec937ee-c0c2-4396-84c1-35c7102f5c4a</onsuccess>
+    <calculation expression="[Inventory Total Amount] + [stock_data.Total Amount]" stage="Inventory Total Amount" />
+  </stage>
+  <stage stageid="6284a7cd-cda6-45a2-a994-838c928bfaee" name="Append Field to Collection" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="-45" />
+    <inputs>
+      <input type="collection" name="Collection" friendlyname="Collection" narrative="The collection to append a field to." expr="[stock_data]" />
+      <input type="text" name="Field Name" friendlyname="Field Name" narrative="The name of the new field." expr="&quot;Total Amount&quot;" />
+      <input type="number" name="Value" friendlyname="Value" narrative="The value to be put in the new field." expr="" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Appended Collection" friendlyname="Appended Collection" narrative="The collection with field appended." stage="stock_data" />
+    </outputs>
+    <onsuccess>6bc761f9-6197-4a63-b773-6d79d2bb03aa</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Field (Number)" />
+  </stage>
+  <stage stageid="f2bc381d-f2c7-44b3-aea6-b7654c80fa81" name="stock_data" type="Collection">
+    <narrative>Contains the data taken from input. Should not contain schema definition, as fields may be added / appended at runtime.</narrative>
+    <display x="-300" y="15" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f776ebf8-36eb-4be6-b6f8-737ee476a9d3" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="60" y="180" w="10" h="10" />
+    <onsuccess>0c23a5d4-d350-4e70-892b-7f3e619e74ce</onsuccess>
+  </stage>
+  <stage stageid="0c23a5d4-d350-4e70-892b-7f3e619e74ce" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="60" y="-180" w="10" h="10" />
+    <onsuccess>d1983da6-f62c-4bec-9bb5-bbe8f5405a3d</onsuccess>
+  </stage>
+  <stage stageid="ca35abba-e3b3-4afa-a5fa-12b3285d8a5e" name="MS Excel VBO::Write Collection" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="180" w="90" h="30" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the specified collection should be written. The default of zero indicates the currently active instance." expr="[excel_handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook within which the data should be written. The default empty value indicates the current workbook within the specified instance." expr="[Workbook Name]" />
+      <input type="collection" name="Collection" friendlyname="Collection" narrative="The collection containing the data which should be written to the worksheet." expr="[stock_data]" />
+      <input type="text" name="Worksheet Name" friendlyname="Worksheet Name" narrative="The name of the worksheet on which the given data should be written. The default empty value indicates the current sheet within the specified workbook." expr="&quot;Sheet1&quot;" />
+      <input type="text" name="Cell Reference" friendlyname="Cell Reference" narrative="The reference at which the collection should be written." expr="&quot;A1&quot;" />
+      <input type="flag" name="Include Column Names" friendlyname="Include Column Names" narrative="True to indicate that the column names from the collection should be written out as the first row; False to ignore the column names and just write out the data." expr="True" />
+    </inputs>
+    <onsuccess>f776ebf8-36eb-4be6-b6f8-737ee476a9d3</onsuccess>
+    <resource object="MS Excel VBO" action="Write Collection" />
+  </stage>
+  <stage stageid="d1983da6-f62c-4bec-9bb5-bbe8f5405a3d" name="MS Excel VBO::Save Workbook As" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-180" w="90" h="30" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the workbook which should be saved resides. The default of zero indicates the currently active instance." expr="[excel_handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook which should be saved" expr="[Workbook Name]" />
+      <input type="text" name="Filename" friendlyname="Filename" narrative="The full path and filename to which the workbook should be saved." expr="Replace([excel_file_path],&quot;.xlsx&quot;,&quot;_result.xlsx&quot;)" />
+    </inputs>
+    <outputs>
+      <output type="text" name="New Workbook Name" friendlyname="New Workbook Name" narrative="The new workbook name which Excel will use to identify the workbook within the instance." stage="result_workbook" />
+    </outputs>
+    <onsuccess>03748e7e-50e5-4349-b6bc-614571a21588</onsuccess>
+    <resource object="MS Excel VBO" action="Save Workbook As" />
+  </stage>
+  <stage stageid="b96a82e2-d4e0-4d09-bd7e-c6c39e760eb7" name="result_workbook" type="Data">
+    <display x="-300" y="105" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="239fe2a8-8a8f-4ca0-b503-9c3253a62c95" name="MS Excel VBO::Close Instance" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="0" w="90" h="30" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance to be closed. Zero indicates the currently active instance." expr="[excel_handle]" />
+      <input type="flag" name="Save Changes" friendlyname="Save Changes" narrative="True to save the changes to the open workbooks on the instance, False to discard any changes. Default is False." expr="True" />
+    </inputs>
+    <onsuccess>4142e3dc-3305-4b07-8d5b-ccd212e5f6d6</onsuccess>
+    <resource object="MS Excel VBO" action="Close Instance" />
+  </stage>
+  <stage stageid="03748e7e-50e5-4349-b6bc-614571a21588" name="MS Excel VBO::Get Number Of Rows" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-135" w="90" h="30" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the number of rows is required. The default of zero indicates the currently active instance." expr="[excel_handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook on which the number of rows is required. The default empty text value indicates the currently active workbook on the specified instance." expr="[result_workbook]" />
+      <input type="text" name="Worksheet Name" friendlyname="Worksheet Name" narrative="The name of the worksheet on which the number of rows is required. The default empty text value indicates the currently active sheet on the specified workbook." expr="[excel_sheet_name]" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Number of rows" friendlyname="Number of rows" narrative="The number of rows." stage="num_rows" />
+    </outputs>
+    <onsuccess>0ffa9411-5827-40b5-a9c1-c35c449dd60e</onsuccess>
+    <resource object="MS Excel VBO" action="Get Number Of Rows" />
+  </stage>
+  <stage stageid="9baad77f-63b0-40a0-8f08-bd5b300b5650" name="num_rows" type="Data">
+    <display x="-450" y="180" w="90" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0ffa9411-5827-40b5-a9c1-c35c449dd60e" name="Name a Cell to Denote Inventory Total" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-90" w="90" h="30" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the required cell value should be set. The default of zero indicates the currently active instance." expr="[excel_handle]" />
+      <input type="text" name="Cell Reference" friendlyname="Cell Reference" narrative="The reference on the speficied sheet identifying the cell which should be set." expr="&quot;A&quot; &amp; ([num_rows]+2)" />
+      <input type="text" name="Value" friendlyname="Value" narrative="The value to which the specified cell should be set." expr="&quot;Inventory Total&quot;" />
+    </inputs>
+    <onsuccess>6bc13a51-f7de-4503-8ef9-3305215d21ae</onsuccess>
+    <resource object="MS Excel VBO" action="Set Cell Value" />
+  </stage>
+  <stage stageid="6bc13a51-f7de-4503-8ef9-3305215d21ae" name="Write Inventory Total Value" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-45" w="90" h="30" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the required cell value should be set. The default of zero indicates the currently active instance." expr="[excel_handle]" />
+      <input type="text" name="Cell Reference" friendlyname="Cell Reference" narrative="The reference on the speficied sheet identifying the cell which should be set." expr="&quot;D&quot; &amp; [num_rows]+2" />
+      <input type="text" name="Value" friendlyname="Value" narrative="The value to which the specified cell should be set." expr="[Inventory Total Amount]" />
+    </inputs>
+    <onsuccess>239fe2a8-8a8f-4ca0-b503-9c3253a62c95</onsuccess>
+    <resource object="MS Excel VBO" action="Set Cell Value" />
+  </stage>
+  <stage stageid="3fa02694-0b22-4512-a9e5-102e99886a02" name="email_receiver" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-450" y="45" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">debanjanbusy@gmail.com</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="96a99aac-7bd4-42ea-9376-7b58e5b8cc47" name="email_subject" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-450" y="90" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Stocks Inventory Results Data - Blueprism Validate Stocktake Process</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0a7e648b-79ff-4c57-90d4-a07ddd614541" name="email_message" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-450" y="135" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">The process has calculated the total amount and Inventory for all the items. Please find the data in the attached excel file.</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c1a4971c-7082-4762-ae75-8909378681ae" name="Configure and send email" type="SubSheetInfo">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <display x="-270" y="-120" w="210" h="60" />
+  </stage>
+  <stage stageid="e7ae5f0b-875f-4667-953a-8fceca24d902" name="Start" type="Start">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <display x="15" y="-120" />
+    <inputs>
+      <input type="text" name="receiver_mail" narrative="The email address of receiver." stage="email_receiver" />
+      <input type="text" name="subject" stage="email_subject" />
+      <input type="text" name="email_body" stage="email_body" />
+      <input type="text" name="attachment_path" stage="attachments_collec.Path" />
+    </inputs>
+    <onsuccess>a587d3dc-5f57-4915-9841-9665b603520e</onsuccess>
+  </stage>
+  <stage stageid="11bab3a0-27be-4396-a882-12b617109e12" name="End" type="End">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <display x="15" y="120" />
+  </stage>
+  <stage stageid="a587d3dc-5f57-4915-9841-9665b603520e" name="Email - POP3/SMTP::Configure" type="Action">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" w="90" h="30" />
+    <inputs>
+      <input type="text" name="Username" friendlyname="Username" narrative="The POP3 and SMTP Username" expr="[email_username]" />
+      <input type="password" name="Password" friendlyname="Password" narrative="The POP3 and SMTP Password" expr="[email_password]" />
+      <input type="text" name="POP3 Server" friendlyname="POP3 Server" narrative="The POP3 Server address e.g. pop.domain.com" expr="&quot;pop.rediffmail.com&quot;" />
+      <input type="text" name="SMTP Server" friendlyname="SMTP Server" narrative="The SMTP Server address e.g. smtp.domain.com" expr="&quot;smtp.rediffmail.com&quot;" />
+      <input type="number" name="POP3 Port" friendlyname="POP3 Port" narrative="The POP3 Port, e.g. 110 or 995" expr="995" />
+      <input type="number" name="SMTP Port" friendlyname="SMTP Port" narrative="The SMTP Port, e.g 25 or 465" expr="25" />
+      <input type="flag" name="POP3 UseSSL" friendlyname="POP3 UseSSL" narrative="Whether to use SSL for POP3" expr="True" />
+      <input type="flag" name="SMTP UseSSL" friendlyname="SMTP UseSSL" narrative="Whether to use SSL for SMTP" expr="True" />
+    </inputs>
+    <onsuccess>e6211260-64b5-427d-ae41-39fd119d6909</onsuccess>
+    <resource object="Email - POP3/SMTP" action="Configure" />
+  </stage>
+  <stage stageid="8a28d2b2-1e41-467a-8378-8cd39647698c" name="email_username" type="Data">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-330" y="-60" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">debanjanbeyblade@rediffmail.com</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="290450e2-97ce-42cf-ac6f-edf83e07b98d" name="email_password" type="Data">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-225" y="-60" w="90" h="30" />
+    <datatype>password</datatype>
+    <initialvalueenc>6,69,0,112,15,0,23,14</initialvalueenc>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e6211260-64b5-427d-ae41-39fd119d6909" name="Email - POP3/SMTP::Send Message" type="Action">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="30" w="90" h="60" />
+    <inputs>
+      <input type="text" name="From" friendlyname="From" narrative="The email address of the sender." expr="[email_username]" />
+      <input type="text" name="To" friendlyname="To" narrative="The email address of the recipient. To address multiple recipients use the format &quot;john.smith@example.com, henry.jones@example.com&quot; OR &quot;John Smith &lt;john.smith@example.com&gt;, Henry Jones &lt;henry.jones@example.com&gt;&quot;." expr="[email_receiver]" />
+      <input type="text" name="Subject" friendlyname="Subject" narrative="The subject of the email." expr="[email_subject]" />
+      <input type="text" name="Body" friendlyname="Body" narrative="The body of the email." expr="[email_body]" />
+      <input type="collection" name="Attachments" friendlyname="Attachments" narrative="A Collection containing a list of files to add to the email as attachments." expr="[attachments_collec]" />
+      <input type="flag" name="BodyIsHTML" friendlyname="BodyIsHTML" narrative="Indicates if the body should be sent as HTML" expr="" />
+    </inputs>
+    <onsuccess>11bab3a0-27be-4396-a882-12b617109e12</onsuccess>
+    <resource object="Email - POP3/SMTP" action="Send Message" />
+  </stage>
+  <stage stageid="dd50b36c-9179-4a72-891b-6a3328ce9b7b" name="email_receiver" type="Data">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-345" y="-15" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5c385be1-f4cd-4789-aef5-452ecec2fbc9" name="email_subject" type="Data">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-225" y="-15" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9e9cc697-707f-42b9-bd95-ce4a885dc6f0" name="email_body" type="Data">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-345" y="45" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4142e3dc-3305-4b07-8d5b-ccd212e5f6d6" name="Configure and send email" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="90" w="90" h="60" />
+    <inputs>
+      <input type="text" name="receiver_mail" friendlyname="receiver_mail" narrative="The email address of receiver." expr="[email_receiver]" />
+      <input type="text" name="subject" friendlyname="subject" expr="[email_subject]" />
+      <input type="text" name="email_body" friendlyname="email_body" expr="[email_message]" />
+      <input type="text" name="attachment_path" friendlyname="attachment_path" expr="Replace([excel_file_path],&quot;.xlsx&quot;,&quot;_result.xlsx&quot;)" />
+    </inputs>
+    <onsuccess>bafaa0c6-3a22-4f1b-a855-9356bb38bddb</onsuccess>
+    <processid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</processid>
+  </stage>
+  <stage stageid="3735129b-5a67-450f-8b51-9771355baa49" name="attachments_collec" type="Collection">
+    <subsheetid>bb80bbb2-4f80-41da-8f82-cebf5f74bd9b</subsheetid>
+    <display x="-225" y="60" w="120" h="60" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Path" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Path" type="text" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+</process>
